@@ -866,9 +866,22 @@
     }
     .testimonials-grid::-webkit-scrollbar { display: none; }
     .testimonial-card {
-      min-width: 85vw;
+      min-width: 80vw;
+      max-width: 80vw;
       scroll-snap-align: center;
       flex-shrink: 0;
+      padding: 1.8rem;
+    }
+    .testimonial-text {
+      font-size: 0.85rem !important;
+      line-height: 1.65 !important;
+      margin-bottom: 1.2rem !important;
+    }
+    .testimonial-stars {
+      margin-bottom: 0.8rem !important;
+    }
+    .testimonial-author {
+      padding-top: 1rem !important;
     }
     .carousel-dots {
       display: flex;
@@ -897,6 +910,8 @@
   .reveal.visible { opacity: 1; transform: translateY(0); }
 </style>
 <link rel="stylesheet" href="https://use.typekit.net/adobe-garamond-pro.css">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
 
