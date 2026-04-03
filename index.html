@@ -622,7 +622,7 @@
       margin-top: 3rem; gap: 2rem; justify-content: flex-start;
     }
     .stat { text-align: left; }
-    .trust-bar { flex-wrap: wrap; gap: 1.5rem; padding: 1.5rem; }
+    .trust-bar { display: none; }
     .services { padding: 4rem 1.5rem; }
     .services-grid { grid-template-columns: 1fr; }
     .testimonials { padding: 4rem 1.5rem; }
@@ -812,6 +812,78 @@
     .sd-installment-row > :last-child { grid-column: 1 / -1; font-size: 0.82rem; }
   }
 
+
+  .mobile-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.4); z-index: 98;
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .mobile-overlay.active { display: block; opacity: 1; }
+  .mobile-close {
+    display: none; position: absolute; top: 1.5rem; right: 1.5rem;
+    background: none; border: none; cursor: pointer;
+    font-size: 1.5rem; color: var(--text-secondary);
+    width: 32px; height: 32px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .nav-links .mobile-close { display: none; }
+  @media (max-width: 900px) {
+    .nav-links .mobile-close { display: flex; }
+    .nav-links { z-index: 99; }
+  }
+
+  /* Mobile CTA button styling */
+  @media (max-width: 900px) {
+    .nav-links .nav-cta {
+      background: var(--blue) !important;
+      color: white !important;
+      text-align: center;
+      padding: 0.9rem 1.5rem;
+      border-radius: 3px;
+      margin-top: 0.5rem;
+    }
+  }
+
+
+  /* Mobile testimonial carousel */
+  @media (max-width: 900px) {
+    .testimonials-grid {
+      grid-template-columns: none !important;
+      display: flex !important;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      gap: 1rem;
+      max-width: none !important;
+      padding-bottom: 1rem;
+      scrollbar-width: none;
+    }
+    .testimonials-grid::-webkit-scrollbar { display: none; }
+    .testimonial-card {
+      min-width: 85vw;
+      scroll-snap-align: center;
+      flex-shrink: 0;
+    }
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 1rem;
+    }
+    .carousel-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--stone-light);
+      border: none; cursor: pointer;
+      padding: 0;
+      transition: background 0.3s;
+    }
+    .carousel-dot.active { background: var(--blue); }
+  }
+  @media (min-width: 901px) {
+    .carousel-dots { display: none; }
+  }
+
   .reveal {
     opacity: 0; transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -822,12 +894,14 @@
 </head>
 <body>
 
+<div class="mobile-overlay" id="mobileOverlay"></div>
 <!-- NAV -->
 <nav id="nav">
   <a href="#" class="nav-logo">
     <img class="lux-dot" src="data:image/png;base64,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" alt="" />Luminosa Global
   </a>
   <ul class="nav-links" id="navLinks">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
     <li><a href="#services">Services</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#process">Process</a></li>
@@ -979,6 +1053,7 @@
       </div>
 
     </div>
+    <div class="carousel-dots" id="carouselDots"></div>
     <div class="testimonials-more reveal">
       <a href="https://www.google.com/search?q=luminosa+global&rlz=1C5CHFA_enUS1095US1095&oq=luminosa+global&gs_lcrp=EgZjaHJvbWUqCwgAEEUYDRg7GIAEMgsIABBFGA0YOxiABDIJCAEQABgNGIAEMggIAhAAGA0YHjINCAMQABiGAxiABBiKBTINCAQQABiGAxiABBiKBTIGCAUQRRg8MgYIBhBFGD0yBggHEEUYPdIBCDIyNjRqMGo0qAIAsAIB&sourceid=chrome&ie=UTF-8#lrd=0x880e2d43dfc84ce5:0x35a535de742dfed6,1" target="_blank">Read All Reviews on Google <span>→</span></a>
     </div>
@@ -1120,8 +1195,47 @@
   // Mobile menu
   const toggle = document.getElementById('mobileToggle');
   const links = document.getElementById('navLinks');
-  toggle.addEventListener('click', () => links.classList.toggle('open'));
-  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+  const overlay = document.getElementById('mobileOverlay');
+  const closeBtn = document.getElementById('mobileClose');
+  
+  function openMenu() {
+    links.classList.add('open');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMenu() {
+    links.classList.remove('open');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  
+  toggle.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+  overlay.addEventListener('click', closeMenu);
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  // Testimonial carousel dots
+  const grid = document.querySelector('.testimonials-grid');
+  const dots = document.getElementById('carouselDots');
+  if (grid && dots) {
+    const cards = grid.querySelectorAll('.testimonial-card');
+    cards.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.addEventListener('click', () => {
+        cards[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      });
+      dots.appendChild(dot);
+    });
+    grid.addEventListener('scroll', () => {
+      const scrollLeft = grid.scrollLeft;
+      const cardWidth = cards[0].offsetWidth + 16;
+      const active = Math.round(scrollLeft / cardWidth);
+      dots.querySelectorAll('.carousel-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === active);
+      });
+    });
+  }
 
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
