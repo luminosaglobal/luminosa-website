@@ -393,26 +393,18 @@
     margin-bottom: 0;
   }
 
-  /* ─── À LA CARTE GRID ─── */
+  /* ─── À LA CARTE BLOCK ─── */
   .alacarte-block {
-    margin-top: 3rem;
-    padding-top: 2.5rem;
-    border-top: 1px solid rgba(42,42,40,0.08);
+    margin-top: 5rem;
   }
-  .alacarte-eyebrow {
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--blue);
-    margin-bottom: 0.5rem;
+  .alacarte-block .pathway-accent {
+    width: 24px;
   }
-  .alacarte-heading {
-    font-family: 'adobe-garamond-pro', 'Adobe Garamond Pro', 'Cormorant Garamond', serif;
+  .alacarte-block .pathway-title {
     font-size: 1.4rem;
-    font-weight: 500;
-    color: var(--charcoal);
-    margin-bottom: 2rem;
+  }
+  .alacarte-block .pathway-desc {
+    font-size: 0.9rem;
   }
   .alacarte-grid {
     display: grid;
@@ -464,51 +456,23 @@
 
   /* ─── ADDITIONAL CONSULAR SERVICES ─── */
   .additional-services {
-    padding: 0 3rem 7rem;
+    padding: 5rem 3rem 7rem;
     max-width: 1200px;
     margin: 0 auto;
   }
-  .additional-divider {
-    border: 0;
-    height: 1px;
-    background: linear-gradient(to right, transparent, rgba(42,42,40,0.12), transparent);
-    margin: 0 auto 5rem;
-    max-width: 600px;
+  .additional-services .pathway-accent {
+    width: 24px;
   }
-  .additional-header {
-    text-align: center;
-    margin-bottom: 3.5rem;
+  .additional-services .pathway-title {
+    font-size: 1.4rem;
   }
-  .additional-eyebrow {
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--stone);
-    margin-bottom: 1rem;
-  }
-  .additional-title {
-    font-family: 'adobe-garamond-pro', 'Adobe Garamond Pro', 'Cormorant Garamond', serif;
-    font-size: clamp(1.6rem, 2.6vw, 2.1rem);
-    font-weight: 400;
-    color: var(--charcoal);
-    line-height: 1.2;
-    margin-bottom: 0.9rem;
-  }
-  .additional-subtitle {
-    font-size: 0.92rem;
-    font-weight: 300;
-    color: var(--text-light);
-    max-width: 520px;
-    margin: 0 auto;
-    line-height: 1.65;
+  .additional-services .pathway-desc {
+    font-size: 0.9rem;
   }
   .additional-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.25rem;
-    max-width: 900px;
-    margin: 0 auto;
   }
   .additional-card {
     background: transparent;
@@ -901,12 +865,10 @@
     .pathway-grid-3 { grid-template-columns: 1fr; gap: 1rem; }
     .pathway-header { max-width: 100%; }
     .service-card-featured { grid-template-columns: 1fr; gap: 1.5rem; padding: 2rem; }
-    .alacarte-block { margin-top: 2.5rem; padding-top: 2rem; }
+    .alacarte-block { margin-top: 3.5rem; }
     .alacarte-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .additional-services { padding: 0 1.5rem 4rem; }
-    .additional-divider { margin-bottom: 3rem; }
+    .additional-services { padding: 3.5rem 1.5rem 4rem; }
     .additional-grid { grid-template-columns: 1fr; gap: 1rem; }
-    .additional-header { margin-bottom: 2.5rem; }
     .testimonials { padding: 4rem 1.5rem; }
     .testimonials-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
     .proof-bar { padding: 2rem 1.5rem; }
@@ -1429,7 +1391,11 @@
 
   <!-- À LA CARTE -->
   <div class="alacarte-block reveal">
-    <h4 class="alacarte-heading">À La Carte</h4>
+    <div class="pathway-header">
+      <span class="pathway-accent"></span>
+      <h3 class="pathway-title">À La Carte Services</h3>
+      <p class="pathway-desc">Individual document, translation, and filing services available standalone for clients managing their own filing.</p>
+    </div>
     <div class="alacarte-grid">
       <div>
         <div class="alacarte-cluster-label">Documents</div>
@@ -1460,9 +1426,10 @@
 
 <!-- ADDITIONAL CONSULAR SERVICES -->
 <section class="additional-services" id="additional-services">
-  <hr class="additional-divider" />
-  <div class="additional-header reveal">
-    <h3 class="additional-title">Additional Consular Services</h3>
+  <div class="pathway-header reveal">
+    <span class="pathway-accent"></span>
+    <h3 class="pathway-title">Additional Consular Services</h3>
+    <p class="pathway-desc">Passport, visa, registration, and consular support for Italian nationals living abroad.</p>
   </div>
   <div class="additional-grid">
     <div class="additional-card reveal">
