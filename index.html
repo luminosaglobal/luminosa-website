@@ -286,6 +286,256 @@
     color: var(--blue); transition: gap 0.3s;
   }
   .service-card:hover .service-link { gap: 0.85rem; }
+  .service-flagship-tag {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--blue);
+    padding: 0.35rem 0.7rem;
+    border: 1px solid rgba(0,92,175,0.25);
+    border-radius: 2px;
+    background: rgba(0,92,175,0.04);
+    transition: all 0.4s;
+  }
+  .service-card:hover .service-flagship-tag {
+    background: var(--blue);
+    color: white;
+    border-color: var(--blue);
+  }
+
+  /* ─── PATHWAYS ─── */
+  .pathway {
+    margin-top: 5rem;
+  }
+  .pathway:first-of-type {
+    margin-top: 0;
+  }
+  .pathway-header {
+    margin-bottom: 2.2rem;
+    max-width: 720px;
+  }
+  .pathway-accent {
+    display: block;
+    width: 32px;
+    height: 2px;
+    background: var(--blue);
+    margin-bottom: 1.2rem;
+  }
+  .pathway-title {
+    font-family: 'adobe-garamond-pro', 'Adobe Garamond Pro', 'Cormorant Garamond', serif;
+    font-size: clamp(1.5rem, 2.3vw, 1.9rem);
+    font-weight: 400;
+    color: var(--charcoal);
+    line-height: 1.2;
+    margin-bottom: 0.55rem;
+  }
+  .pathway-desc {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+  .pathway-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+  .pathway-grid-solo {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+  .pathway-grid-3 .service-card {
+    padding: 2.2rem 2rem;
+  }
+  .pathway-grid-3 .service-number {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+  }
+  .pathway-grid-3 .service-name {
+    font-size: 1.3rem;
+  }
+  .pathway-grid-3 .service-desc {
+    font-size: 0.85rem;
+  }
+
+  /* ─── FEATURED CARD (full-width horizontal) ─── */
+  .service-card-featured {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 3.5rem;
+    align-items: start;
+    padding: 2.8rem 3rem;
+  }
+  .featured-left .service-number {
+    margin-bottom: 1.2rem;
+  }
+  .featured-left .service-name {
+    margin-bottom: 1rem;
+  }
+  .featured-partner {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--blue);
+    line-height: 1.5;
+  }
+  .featured-right .service-desc {
+    margin-bottom: 1rem;
+  }
+  .featured-right .service-desc:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ─── À LA CARTE STRIP ─── */
+  .alacarte-strip {
+    margin-top: 2rem;
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .alacarte-strip-label {
+    flex-shrink: 0;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--blue);
+  }
+  .alacarte-strip-items {
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+  .alacarte-sep {
+    color: var(--stone-light);
+    margin: 0 0.7rem;
+    font-weight: 300;
+  }
+
+  /* ─── PATHWAY DISCLAIMER ─── */
+  .pathway-disclaimer {
+    margin-top: 1.75rem;
+    font-size: 0.78rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+  .service-collab {
+    display: block;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin: -0.4rem 0 1rem;
+    line-height: 1.55;
+  }
+
+  /* ─── ADDITIONAL CONSULAR SERVICES ─── */
+  .additional-services {
+    padding: 0 3rem 7rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .additional-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(42,42,40,0.12), transparent);
+    margin: 0 auto 5rem;
+    max-width: 600px;
+  }
+  .additional-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+  .additional-eyebrow {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 1rem;
+  }
+  .additional-title {
+    font-family: 'adobe-garamond-pro', 'Adobe Garamond Pro', 'Cormorant Garamond', serif;
+    font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+    font-weight: 400;
+    color: var(--charcoal);
+    line-height: 1.2;
+    margin-bottom: 0.9rem;
+  }
+  .additional-subtitle {
+    font-size: 0.92rem;
+    font-weight: 300;
+    color: var(--text-light);
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.65;
+  }
+  .additional-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .additional-card {
+    background: transparent;
+    border: 1px solid rgba(42,42,40,0.08);
+    padding: 2rem 1.8rem;
+    border-radius: 3px;
+    transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+    position: relative;
+  }
+  .additional-card:hover {
+    background: white;
+    border-color: rgba(0,92,175,0.15);
+    transform: translateY(-2px);
+  }
+  .additional-card-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .additional-card-name {
+    font-family: 'adobe-garamond-pro', 'Adobe Garamond Pro', 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+    color: var(--charcoal);
+  }
+  .additional-card-desc {
+    font-size: 0.85rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+  .additional-note {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--text-light);
+    font-style: italic;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
 
   /* ─── TESTIMONIALS ─── */
   .testimonials {
@@ -626,6 +876,16 @@
     .trust-bar { display: none; }
     .services { padding: 4rem 1.5rem; }
     .services-grid { grid-template-columns: 1fr; }
+    .pathway { margin-top: 3.5rem; }
+    .pathway-grid-3 { grid-template-columns: 1fr; gap: 1rem; }
+    .pathway-header { max-width: 100%; }
+    .service-card-featured { grid-template-columns: 1fr; gap: 1.5rem; padding: 2rem; }
+    .alacarte-strip { flex-direction: column; gap: 0.7rem; }
+    .alacarte-strip-items { line-height: 1.9; }
+    .additional-services { padding: 0 1.5rem 4rem; }
+    .additional-divider { margin-bottom: 3rem; }
+    .additional-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .additional-header { margin-bottom: 2.5rem; }
     .testimonials { padding: 4rem 1.5rem; }
     .testimonials-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
     .proof-bar { padding: 2rem 1.5rem; }
@@ -1084,29 +1344,99 @@
       <span class="section-tag-text">What We Do</span>
       <span class="section-tag-line"></span>
     </div>
-    <h2 class="section-title">Tailored Pathways to Your Italian Citizenship</h2>
-    <p class="section-subtitle">Four distinct programs designed for every stage and circumstance of your citizenship journey.</p>
+    <h2 class="section-title">Italian Citizenship Under the 2025 Law</h2>
+    <p class="section-subtitle">Italy's Law 74/2025 limits administrative recognition of <em>jure sanguinis</em> to applicants with an Italian parent or grandparent. For families with deeper ancestry, the judicial path remains open. We guide families through both.</p>
   </div>
-  <div class="services-grid">
-    <div class="service-card reveal" style="cursor:default;">
-      <div class="service-number">01</div>
-      <h3 class="service-name">Full Service Program</h3>
-      <p class="service-desc">Complete end-to-end assistance obtaining Italian dual citizenship through ancestry. We handle document retrieval, translations, apostilles, and consulate submissions.</p>
+
+  <!-- ADMINISTRATIVE -->
+  <div class="pathway reveal">
+    <div class="pathway-header">
+      <span class="pathway-accent"></span>
+      <h3 class="pathway-title">Administrative Recognition Services</h3>
+      <p class="pathway-desc">Recognition through the Italian consulate system — by ancestry, marriage, or reacquisition of prior citizenship.</p>
     </div>
-    <div class="service-card reveal" style="cursor:default;">
-      <div class="service-number">02</div>
-      <h3 class="service-name">Reacquisition Service</h3>
-      <p class="service-desc">Dedicated guidance for former Italian citizens seeking to restore their citizenship status through the reacquisition process.</p>
+    <div class="pathway-grid-3">
+      <div class="service-card reveal" style="cursor:default;">
+        <span class="service-flagship-tag">Flagship</span>
+        <div class="service-number">01</div>
+        <h3 class="service-name">Full Service Program</h3>
+        <p class="service-desc">End-to-end recognition for eligible families with an Italian parent or grandparent. Every step of the citizenship file — from document retrieval through consulate submission — handled by our team to recognition.</p>
+      </div>
+      <div class="service-card reveal" style="cursor:default;">
+        <div class="service-number">02</div>
+        <h3 class="service-name">Spousal Citizenship</h3>
+        <p class="service-desc">Citizenship recognition for spouses of Italian citizens through marriage. Eligibility review, documentation, and submission through the consular process.</p>
+      </div>
+      <div class="service-card reveal" style="cursor:default;">
+        <div class="service-number">03</div>
+        <h3 class="service-name">Reacquisition Service</h3>
+        <p class="service-desc">Dedicated guidance for former Italian citizens seeking to restore their citizenship status through the reacquisition process.</p>
+      </div>
     </div>
-    <div class="service-card reveal" style="cursor:default;">
-      <div class="service-number">03</div>
-      <h3 class="service-name">Appointment Scheduling</h3>
-      <p class="service-desc">We secure hard-to-obtain Italian consulate appointments on your behalf, navigating the notoriously competitive booking systems.</p>
+    <div class="alacarte-strip reveal">
+      <span class="alacarte-strip-label">Also Available À La Carte</span>
+      <span class="alacarte-strip-items">Appointment Scheduling<span class="alacarte-sep">·</span>Demand Filing<span class="alacarte-sep">·</span>Multilingual Translations<span class="alacarte-sep">·</span>Federal &amp; State Apostille<span class="alacarte-sep">·</span>Italian Certificate Procurement<span class="alacarte-sep">·</span>Translation Legalization<span class="alacarte-sep">·</span>Naturalization Record Search<span class="alacarte-sep">·</span>Form Assistance</span>
     </div>
-    <div class="service-card reveal" style="cursor:default;">
-      <div class="service-number">04</div>
-      <h3 class="service-name">Court Bypass Program</h3>
-      <p class="service-desc">Citizenship recognition through the Italian court system with our partner Avvocato in Italy — ideal when consulate appointments are unavailable.</p>
+  </div>
+
+  <!-- JUDICIAL -->
+  <div class="pathway reveal">
+    <div class="pathway-header">
+      <span class="pathway-accent"></span>
+      <h3 class="pathway-title">Judicial Recognition Services</h3>
+      <p class="pathway-desc">For great-grandparent ancestry and beyond, female-line lineage prior to 1948, and consulate decisions requiring appeal.</p>
+    </div>
+    <div class="pathway-grid-3">
+      <div class="service-card reveal" style="cursor:default;">
+        <span class="service-flagship-tag">Flagship</span>
+        <div class="service-number">04</div>
+        <h3 class="service-name">Court Bypass Program</h3>
+        <span class="service-collab">In Collaboration with our Avvocato in Italy</span>
+        <p class="service-desc">Recognition through the Italian court system for applicants beyond second-generation eligibility, where administrative recognition is no longer available under the 2025 law.</p>
+      </div>
+      <div class="service-card reveal" style="cursor:default;">
+        <div class="service-number">05</div>
+        <h3 class="service-name">1948 Appeal Cases</h3>
+        <span class="service-collab">In Collaboration with our Avvocato in Italy</span>
+        <p class="service-desc">Judicial recognition for applicants whose Italian lineage passes through a female ancestor prior to 1948, when transmission through mothers was legally restricted.</p>
+      </div>
+      <div class="service-card reveal" style="cursor:default;">
+        <div class="service-number">06</div>
+        <h3 class="service-name">Consulate Rejection Appeals</h3>
+        <span class="service-collab">In Collaboration with our Avvocato in Italy</span>
+        <p class="service-desc">Judicial review of denied citizenship applications — challenging consulate rejections through the Italian court system to overturn the original decision.</p>
+      </div>
+    </div>
+    <p class="pathway-disclaimer">Luminosa Global is not a law firm. Judicial proceedings are conducted by our partner Avvocato in Italy.</p>
+  </div>
+</section>
+
+<!-- ADDITIONAL CONSULAR SERVICES -->
+<section class="additional-services" id="additional-services">
+  <hr class="additional-divider" />
+  <div class="additional-header reveal">
+    <h3 class="additional-title">Additional Consular Services</h3>
+  </div>
+  <div class="additional-grid">
+    <div class="additional-card reveal">
+      <span class="additional-card-label">Service</span>
+      <h4 class="additional-card-name">Passport Appointments</h4>
+      <p class="additional-card-desc">Renewal and new passport appointment scheduling for Italian nationals, with availability monitoring across consular calendars.</p>
+    </div>
+    <div class="additional-card reveal">
+      <span class="additional-card-label">Service</span>
+      <h4 class="additional-card-name">Student Visa Appointments</h4>
+      <p class="additional-card-desc">Visa appointment assistance for students pursuing studies in Italy, including monitoring and scheduling support.</p>
+    </div>
+    <div class="additional-card reveal">
+      <span class="additional-card-label">Service</span>
+      <h4 class="additional-card-name">AIRE Registration</h4>
+      <p class="additional-card-desc">Registration in the Anagrafe degli Italiani Residenti all'Estero for Italian citizens living abroad — required for consular services and electoral rights.</p>
+    </div>
+    <div class="additional-card reveal">
+      <span class="additional-card-label">Service</span>
+      <h4 class="additional-card-name">Other Consular Needs</h4>
+      <p class="additional-card-desc">Notarial acts, certificate requests, and additional consular matters handled on a case-by-case basis.</p>
     </div>
   </div>
 </section>
