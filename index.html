@@ -393,32 +393,53 @@
     margin-bottom: 0;
   }
 
-  /* ─── À LA CARTE STRIP ─── */
-  .alacarte-strip {
-    margin-top: 2rem;
-    display: flex;
-    align-items: baseline;
-    gap: 1.5rem;
-    flex-wrap: wrap;
+  /* ─── À LA CARTE GRID ─── */
+  .alacarte-block {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(42,42,40,0.08);
   }
-  .alacarte-strip-label {
-    flex-shrink: 0;
+  .alacarte-eyebrow {
     font-size: 0.65rem;
     font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--blue);
+    margin-bottom: 0.5rem;
   }
-  .alacarte-strip-items {
-    font-size: 0.82rem;
-    font-weight: 400;
+  .alacarte-heading {
+    font-family: 'adobe-garamond-pro', 'Adobe Garamond Pro', 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 2rem;
+  }
+  .alacarte-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+  .alacarte-cluster-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
     color: var(--text-secondary);
-    line-height: 1.7;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(42,42,40,0.08);
   }
-  .alacarte-sep {
-    color: var(--stone-light);
-    margin: 0 0.7rem;
-    font-weight: 300;
+  .alacarte-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .alacarte-list li {
+    font-size: 0.88rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    line-height: 1.5;
+    padding: 0.55rem 0;
   }
 
   /* ─── PATHWAY DISCLAIMER ─── */
@@ -880,8 +901,8 @@
     .pathway-grid-3 { grid-template-columns: 1fr; gap: 1rem; }
     .pathway-header { max-width: 100%; }
     .service-card-featured { grid-template-columns: 1fr; gap: 1.5rem; padding: 2rem; }
-    .alacarte-strip { flex-direction: column; gap: 0.7rem; }
-    .alacarte-strip-items { line-height: 1.9; }
+    .alacarte-block { margin-top: 2.5rem; padding-top: 2rem; }
+    .alacarte-grid { grid-template-columns: 1fr; gap: 2rem; }
     .additional-services { padding: 0 1.5rem 4rem; }
     .additional-divider { margin-bottom: 3rem; }
     .additional-grid { grid-template-columns: 1fr; gap: 1rem; }
@@ -1373,10 +1394,6 @@
         <p class="service-desc">Dedicated guidance for former Italian citizens seeking to restore their citizenship status through the reacquisition process.</p>
       </div>
     </div>
-    <div class="alacarte-strip reveal">
-      <span class="alacarte-strip-label">Also Available À La Carte</span>
-      <span class="alacarte-strip-items">Appointment Scheduling<span class="alacarte-sep">·</span>Demand Filing<span class="alacarte-sep">·</span>Multilingual Translations<span class="alacarte-sep">·</span>Federal &amp; State Apostille<span class="alacarte-sep">·</span>Italian Certificate Procurement<span class="alacarte-sep">·</span>Translation Legalization<span class="alacarte-sep">·</span>Naturalization Record Search<span class="alacarte-sep">·</span>Form Assistance</span>
-    </div>
   </div>
 
   <!-- JUDICIAL -->
@@ -1408,6 +1425,37 @@
       </div>
     </div>
     <p class="pathway-disclaimer">Luminosa Global is not a law firm. Judicial proceedings are conducted by our partner Avvocato in Italy.</p>
+  </div>
+
+  <!-- À LA CARTE -->
+  <div class="alacarte-block reveal">
+    <div class="alacarte-eyebrow">Also Available À La Carte</div>
+    <h4 class="alacarte-heading">Individual services for clients managing their own filing.</h4>
+    <div class="alacarte-grid">
+      <div>
+        <div class="alacarte-cluster-label">Documents</div>
+        <ul class="alacarte-list">
+          <li>Italian Certificate Procurement</li>
+          <li>Naturalization Record Search</li>
+          <li>Demand Filing</li>
+        </ul>
+      </div>
+      <div>
+        <div class="alacarte-cluster-label">Translation</div>
+        <ul class="alacarte-list">
+          <li>Multilingual Translations</li>
+          <li>Translation Legalization</li>
+          <li>Federal &amp; State Apostille</li>
+        </ul>
+      </div>
+      <div>
+        <div class="alacarte-cluster-label">Filing Support</div>
+        <ul class="alacarte-list">
+          <li>Appointment Scheduling</li>
+          <li>Form Assistance</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
