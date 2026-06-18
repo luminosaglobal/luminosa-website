@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Consultation | Luminosa Global</title>
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Schedule a consultation with Dr. Meschino to review your Italian citizenship pathway.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<style>
+  :root {
+    --blue: #005CAF;
+    --blue-light: #1A75C7;
+    --ivory: #F6F1EB;
+    --warm-white: #FAF8F5;
+    --charcoal: #2A2A28;
+    --stone-light: #C8BFAE;
+    --text-secondary: #5A5852;
+    --text-light: #8A857D;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+  }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--warm-white);
+    color: var(--charcoal);
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* NAV */
+  nav {
+    flex-shrink: 0;
+    padding: 0.9rem 3rem;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(250,248,245,0.94);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 1px 0 rgba(42,42,40,0.06);
+    z-index: 100;
+  }
+  .nav-logo {
+    font-family: 'adobe-garamond-pro', 'Adobe Garamond Pro', 'Cormorant Garamond', serif;
+    font-size: 1.5rem; font-weight: 600; letter-spacing: 0.04em;
+    color: var(--charcoal); text-decoration: none;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .lux-dot {
+    width: 24px; height: auto; display: inline-block;
+    vertical-align: middle; margin-right: 2px;
+  }
+  .nav-links {
+    display: flex; gap: 2.5rem; list-style: none; align-items: center;
+  }
+  .nav-links a {
+    font-size: 0.8rem; font-weight: 500; text-decoration: none;
+    color: var(--text-secondary);
+    letter-spacing: 0.1em; text-transform: uppercase;
+    transition: color 0.3s; position: relative;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: -4px; left: 0;
+    width: 0; height: 1px; background: var(--blue);
+    transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+  .nav-links a:hover { color: var(--blue); }
+  .nav-links a:hover::after { width: 100%; }
+
+  /* EMBED — fills remaining viewport */
+  .embed-wrap {
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+  .calendly-inline-widget {
+    width: 100%;
+    height: 100% !important;
+    min-width: 320px;
+    min-height: 0 !important;
+  }
+  .calendly-inline-widget iframe {
+    height: 100% !important;
+    min-height: 0 !important;
+  }
+
+  /* COMPACT FOOTER */
+  footer {
+    flex-shrink: 0;
+    background: var(--charcoal); color: var(--ivory);
+    padding: 0.9rem 3rem;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.72rem; letter-spacing: 0.04em;
+  }
+  .footer-copy { color: var(--text-light); }
+  .footer-links { display: flex; gap: 1.5rem; align-items: center; }
+  .footer-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--stone-light); }
+  .footer-mail {
+    color: var(--stone-light) !important;
+    font-size: 0.78rem;
+  }
+  .footer-mail:hover { color: var(--blue-light) !important; }
+
+  /* MOBILE */
+  .mobile-toggle {
+    display: none; flex-direction: column; gap: 5px;
+    cursor: pointer; background: none; border: none; padding: 4px;
+  }
+  .mobile-toggle span {
+    width: 24px; height: 1.5px; background: var(--charcoal); transition: all 0.3s;
+  }
+  .mobile-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.4); z-index: 99;
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .mobile-overlay.active { display: block; opacity: 1; }
+  .mobile-close {
+    display: none; position: absolute; top: 1.5rem; right: 1.5rem;
+    background: none; border: none; font-size: 1.5rem;
+    color: var(--charcoal); cursor: pointer;
+  }
+
+  @media (max-width: 900px) {
+    nav { padding: 0.55rem 1.25rem; }
+    .nav-logo { font-size: 1.25rem; }
+    .lux-dot { width: 20px; }
+    .mobile-toggle { display: flex; }
+    .nav-links {
+      position: fixed; top: 0; right: -100%;
+      width: 280px; height: 100vh;
+      background: var(--warm-white);
+      flex-direction: column; padding: 5rem 2rem 2rem;
+      gap: 1.5rem;
+      box-shadow: -10px 0 40px rgba(0,0,0,0.1);
+      transition: right 0.4s cubic-bezier(0.4,0,0.2,1);
+      align-items: flex-start;
+      z-index: 101;
+    }
+    .nav-links.open { right: 0; }
+    .nav-links.open .mobile-close { display: block; }
+    footer {
+      padding: 0.5rem 1.25rem;
+      font-size: 0.62rem;
+    }
+    .footer-mail { display: none; }
+    .footer-links { gap: 0.9rem; }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <img class="lux-dot" src="data:image/png;base64,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" alt="" />Luminosa Global
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#reviews">Reviews</a></li>
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="embed-wrap">
+  <div class="calendly-inline-widget" id="calendlyWidget" data-url="https://calendly.com/drmeschino-luminosa/15?hide_gdpr_banner=1&primary_color=005CAF"></div>
+</div>
+
+<script>
+  // Pass through URL params (email, name, etc.) to Calendly for prefill
+  (function() {
+    const params = new URLSearchParams(window.location.search);
+    const email = params.get('email');
+    const name = params.get('name');
+    const widget = document.getElementById('calendlyWidget');
+    let url = 'https://calendly.com/drmeschino-luminosa/20min?hide_gdpr_banner=1&primary_color=005CAF';
+    if (email) url += '&email=' + encodeURIComponent(email);
+    if (name) url += '&name=' + encodeURIComponent(name);
+    widget.setAttribute('data-url', url);
+  })();
+</script>
+
+<footer>
+  <span class="footer-copy">&copy; 2026 Luminosa Global Inc.</span>
+  <div class="footer-links">
+    <a href="mailto:drmeschino@luminosa.global" class="footer-mail">drmeschino@luminosa.global</a>
+    <a href="/privacy-policy.html">Privacy</a>
+    <a href="/terms-and-conditions.html">Terms</a>
+  </div>
+</footer>
+
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script>
+  // Fire Meta Pixel Lead event when Calendly booking completes
+  // (fbq only exists if user accepted cookies via cookie-consent.js)
+  window.addEventListener('message', function(e) {
+    if (e.data.event && e.data.event === 'calendly.event_scheduled') {
+      if (typeof fbq === 'function') fbq('track', 'Lead');
+    }
+  });
+</script>
+<script>
+  const toggle = document.getElementById('mobileToggle');
+  const navLinks = document.getElementById('navLinks');
+  const overlay = document.getElementById('mobileOverlay');
+  const closeBtn = document.getElementById('mobileClose');
+  const closeNav = () => {
+    navLinks.classList.remove('open');
+    overlay.classList.remove('active');
+  };
+  if (toggle) toggle.addEventListener('click', () => {
+    navLinks.classList.add('open');
+    overlay.classList.add('active');
+  });
+  if (overlay) overlay.addEventListener('click', closeNav);
+  if (closeBtn) closeBtn.addEventListener('click', closeNav);
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+</script>
+
+<script src="/cookie-consent.js"></script>
+</body>
+</html>
