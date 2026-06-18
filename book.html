@@ -194,7 +194,7 @@
     const email = params.get('email');
     const name = params.get('name');
     const widget = document.getElementById('calendlyWidget');
-    let url = 'https://calendly.com/drmeschino-luminosa/20min?hide_gdpr_banner=1&primary_color=005CAF';
+    let url = 'https://calendly.com/drmeschino-luminosa/15?hide_gdpr_banner=1&primary_color=005CAF';
     if (email) url += '&email=' + encodeURIComponent(email);
     if (name) url += '&name=' + encodeURIComponent(name);
     widget.setAttribute('data-url', url);
