@@ -68,8 +68,25 @@
   .chip-bar { position:sticky; top:0; z-index:90; background:rgba(250,248,245,0.96);
     backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
     border-bottom:1px solid var(--linen); padding:0.85rem 3rem; }
-  .chip-track { max-width:1200px; margin:0 auto; display:flex; gap:0.6rem; overflow-x:auto; scrollbar-width:none; }
+  .chip-shell { max-width:1200px; margin:0 auto; position:relative; display:flex; align-items:center; }
+  .chip-track { flex:1; display:flex; gap:0.6rem; overflow-x:auto; scrollbar-width:none;
+    scroll-behavior:smooth; cursor:grab; padding:2px 0; }
+  .chip-track.dragging { cursor:grabbing; scroll-behavior:auto; }
   .chip-track::-webkit-scrollbar { display:none; }
+  .chip-shell::before, .chip-shell::after { content:''; position:absolute; top:0; bottom:0; width:44px;
+    z-index:2; pointer-events:none; opacity:0; transition:opacity 0.3s; }
+  .chip-shell::before { left:34px; background:linear-gradient(90deg, rgba(250,248,245,0.98), transparent); }
+  .chip-shell::after { right:34px; background:linear-gradient(270deg, rgba(250,248,245,0.98), transparent); }
+  .chip-shell.fade-l::before { opacity:1; }
+  .chip-shell.fade-r::after { opacity:1; }
+  .chip-arrow { flex:none; z-index:3; width:32px; height:32px; display:flex; align-items:center; justify-content:center;
+    cursor:pointer; background:white; border:1px solid var(--stone-light); border-radius:50%;
+    color:var(--text-secondary); font-size:0.85rem; line-height:1;
+    transition:all 0.3s; user-select:none; }
+  .chip-arrow:hover { border-color:var(--blue); color:var(--blue); background:var(--blue-pale); }
+  .chip-arrow[disabled] { opacity:0.3; pointer-events:none; }
+  .chip-arrow.prev { margin-right:0.6rem; }
+  .chip-arrow.next { margin-left:0.6rem; }
   .chip { flex:none; display:inline-flex; align-items:center; gap:0.5rem; cursor:pointer;
     font-family:'DM Sans',sans-serif; font-size:0.74rem; font-weight:500; letter-spacing:0.06em;
     color:var(--text-secondary); background:transparent; border:1px solid var(--stone-light);
@@ -178,7 +195,9 @@
   </div>
 </header>
 
-<div class="chip-bar"><div class="chip-track" id="chipTrack">
+<div class="chip-bar"><div class="chip-shell" id="chipShell">
+<button class="chip-arrow prev" id="chipPrev" aria-label="Scroll categories left">&#8592;</button>
+<div class="chip-track" id="chipTrack">
 <button class="chip" data-target="law">Law 74/2025 &amp; the Tajani Decree<span class="chip-n">40</span></button>
 <button class="chip" data-target="concourt">Constitutional Court &amp; Landmark Rulings<span class="chip-n">12</span></button>
 <button class="chip" data-target="courts">Court-by-Court Outcomes &amp; Case Reports<span class="chip-n">35</span></button>
@@ -191,6 +210,8 @@
 <button class="chip" data-target="wins">Recognitions &amp; Success Stories<span class="chip-n">3</span></button>
 <button class="chip" data-target="after">After Recognition — Passports, Registration &amp; Family<span class="chip-n">13</span></button>
 <button class="chip" data-target="elig">Eligibility &amp; General Questions<span class="chip-n">46</span></button>
+</div>
+<button class="chip-arrow next" id="chipNext" aria-label="Scroll categories right">&#8594;</button>
 </div></div>
 
 <main class="e-wrap" id="library">
@@ -1032,11 +1053,47 @@
   }
   var t; input.addEventListener('input', function() { clearTimeout(t); t = setTimeout(filter, 120); });
 
+  // chip bar scrolling: arrows + fades + wheel + drag
+  var track = document.getElementById('chipTrack');
+  var shell = document.getElementById('chipShell');
+  var prev = document.getElementById('chipPrev');
+  var next = document.getElementById('chipNext');
+  function edges() {
+    var max = track.scrollWidth - track.clientWidth - 1;
+    shell.classList.toggle('fade-l', track.scrollLeft > 1);
+    shell.classList.toggle('fade-r', track.scrollLeft < max);
+    prev.disabled = track.scrollLeft <= 1;
+    next.disabled = track.scrollLeft >= max;
+  }
+  prev.addEventListener('click', function() { track.scrollBy({ left: -track.clientWidth * 0.7, behavior: 'smooth' }); });
+  next.addEventListener('click', function() { track.scrollBy({ left: track.clientWidth * 0.7, behavior: 'smooth' }); });
+  track.addEventListener('scroll', edges, { passive: true });
+  window.addEventListener('resize', edges);
+  track.addEventListener('wheel', function(e) {
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) { e.preventDefault(); track.scrollLeft += e.deltaY; }
+  }, { passive: false });
+  var drag = null;
+  track.addEventListener('pointerdown', function(e) {
+    if (e.pointerType !== 'mouse') return;
+    drag = { x: e.clientX, s: track.scrollLeft, moved: false };
+    track.classList.add('dragging');
+  });
+  window.addEventListener('pointermove', function(e) {
+    if (!drag) return;
+    var dx = e.clientX - drag.x;
+    if (Math.abs(dx) > 4) drag.moved = true;
+    track.scrollLeft = drag.s - dx;
+  });
+  window.addEventListener('pointerup', function() { drag = null; track.classList.remove('dragging'); });
+  track.addEventListener('click', function(e) { if (drag === null && this._m) { e.preventDefault(); } }, true);
+  edges();
+
   var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
   chips.forEach(function(ch) {
     ch.addEventListener('click', function() {
       chips.forEach(function(o) { o.classList.remove('active'); });
       ch.classList.add('active');
+      ch.scrollIntoView({ behavior:'smooth', block:'nearest', inline:'center' });
       var sec = document.getElementById(ch.dataset.target);
       if (sec) sec.scrollIntoView({ behavior:'smooth', block:'start' });
     });
