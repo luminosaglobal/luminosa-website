@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Italian Citizenship Encyclopedia | Court Rulings &amp; Community Answers | Luminosa Global</title>
+<meta name="description" content="A curated, searchable library of 240+ real community discussions on Italian citizenship by descent — Law 74/2025, Constitutional Court rulings, court-by-court outcomes, 1948 cases, documents, consulates, and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue:#005CAF; --blue-dark:#004A8C; --blue-light:#1A75C7; --blue-pale:#E8F0F8;
+    --ivory:#F6F1EB; --warm-white:#FAF8F5; --charcoal:#2A2A28;
+    --gold:#B8963E; --gold-light:#D4B366; --stone:#A69B8D; --stone-light:#C8BFAE; --linen:#EDE6DC;
+    --text-primary:#2A2A28; --text-secondary:#5A5852; --text-light:#8A857D;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; font-size:16px; }
+  body { font-family:'DM Sans',sans-serif; background:var(--warm-white); color:var(--text-primary); overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+
+  /* NAV (matches index.html) */
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:0.9rem 3rem;
+    display:flex; align-items:center; justify-content:space-between;
+    background:rgba(250,248,245,0.94); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
+    box-shadow:0 1px 0 rgba(42,42,40,0.06); }
+  .nav-logo { font-family:'adobe-garamond-pro','Adobe Garamond Pro','Cormorant Garamond',serif;
+    font-size:1.5rem; font-weight:600; letter-spacing:0.04em; color:var(--charcoal);
+    text-decoration:none; display:flex; align-items:center; gap:0.5rem; }
+  .lux-dot { width:24px; height:auto; display:inline-block; vertical-align:middle; margin-right:2px; }
+  .nav-links { display:flex; gap:2.5rem; list-style:none; align-items:center; }
+  .nav-links a { font-size:0.8rem; font-weight:500; text-decoration:none; color:var(--text-secondary);
+    letter-spacing:0.1em; text-transform:uppercase; transition:color 0.3s; position:relative; }
+  .nav-links a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:1px;
+    background:var(--blue); transition:width 0.4s cubic-bezier(0.4,0,0.2,1); }
+  .nav-links a:hover { color:var(--blue); }
+  .nav-links a:hover::after { width:100%; }
+  .nav-cta { font-size:0.75rem !important; font-weight:600 !important; letter-spacing:0.12em !important;
+    padding:0.7rem 1.6rem; background:var(--blue); color:white !important; border-radius:2px;
+    transition:background 0.3s, transform 0.2s !important; }
+  .nav-cta:hover { background:var(--blue-dark) !important; transform:translateY(-1px); }
+  .nav-cta::after { display:none !important; }
+  .mobile-toggle { display:none; }
+
+  /* HERO */
+  .e-hero { padding:9.5rem 3rem 4.5rem; position:relative; overflow:hidden;
+    background:linear-gradient(160deg, #00294F 0%, var(--blue-dark) 55%, var(--blue) 100%); }
+  .e-hero::after { content:''; position:absolute; inset:0;
+    background:radial-gradient(ellipse at 80% -10%, rgba(212,179,102,0.18), transparent 55%); pointer-events:none; }
+  .e-hero-inner { max-width:1200px; margin:0 auto; position:relative; z-index:2; }
+  .hero-badge { display:inline-flex; align-items:center; gap:0.75rem; margin-bottom:1.75rem; }
+  .hero-badge-line { width:40px; height:1px; background:var(--gold); }
+  .hero-badge-text { font-size:0.7rem; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold-light); }
+  .e-hero h1 { font-family:'adobe-garamond-pro','Adobe Garamond Pro','Cormorant Garamond',serif;
+    font-size:clamp(2.6rem,5.2vw,4.2rem); font-weight:300; line-height:1.1; color:white; max-width:820px; margin-bottom:1.25rem; }
+  .e-hero h1 em { font-style:italic; font-weight:400; color:var(--gold-light); }
+  .e-hero-sub { font-size:1.02rem; font-weight:300; line-height:1.7; color:rgba(255,255,255,0.75); max-width:600px; margin-bottom:2.25rem; }
+  .e-search { display:flex; align-items:center; gap:0.75rem; max-width:600px;
+    background:rgba(250,248,245,0.97); border-radius:2px; padding:0.35rem 0.35rem 0.35rem 1.1rem;
+    box-shadow:0 18px 45px rgba(0,20,45,0.35); }
+  .e-search svg { flex:none; opacity:0.55; }
+  .e-search input { flex:1; border:0; outline:0; background:transparent; font-family:'DM Sans',sans-serif;
+    font-size:0.95rem; color:var(--text-primary); padding:0.7rem 0; }
+  .e-search input::placeholder { color:var(--text-light); }
+  .e-count { font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-light);
+    padding:0.55rem 0.9rem; white-space:nowrap; }
+
+  /* CHIP BAR */
+  .chip-bar { position:sticky; top:0; z-index:90; background:rgba(250,248,245,0.96);
+    backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--linen); padding:0.85rem 3rem; }
+  .chip-track { max-width:1200px; margin:0 auto; display:flex; gap:0.6rem; overflow-x:auto; scrollbar-width:none; }
+  .chip-track::-webkit-scrollbar { display:none; }
+  .chip { flex:none; display:inline-flex; align-items:center; gap:0.5rem; cursor:pointer;
+    font-family:'DM Sans',sans-serif; font-size:0.74rem; font-weight:500; letter-spacing:0.06em;
+    color:var(--text-secondary); background:transparent; border:1px solid var(--stone-light);
+    border-radius:999px; padding:0.5rem 1rem; transition:all 0.3s; white-space:nowrap; }
+  .chip:hover, .chip.active { border-color:var(--blue); color:var(--blue); background:var(--blue-pale); }
+  .chip-n { font-size:0.68rem; color:var(--text-light); }
+  .chip.active .chip-n, .chip:hover .chip-n { color:var(--blue-light); }
+
+  /* SECTIONS */
+  .e-wrap { max-width:1200px; margin:0 auto; padding:3.5rem 3rem 1rem; }
+  .e-section { padding:2.25rem 0 3rem; border-bottom:1px solid var(--linen); scroll-margin-top:88px; }
+  .e-section:last-of-type { border-bottom:0; }
+  .e-badge { display:inline-flex; align-items:center; gap:0.75rem; margin-bottom:1rem; }
+  .e-badge-line { width:32px; height:1px; background:var(--gold); }
+  .e-badge-text { font-size:0.68rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); }
+  .e-section h2 { font-family:'adobe-garamond-pro','Adobe Garamond Pro','Cormorant Garamond',serif;
+    font-size:clamp(1.7rem,3vw,2.3rem); font-weight:400; line-height:1.15; margin-bottom:0.75rem; }
+  .e-desc { font-size:0.95rem; font-weight:300; line-height:1.7; color:var(--text-secondary); max-width:680px; margin-bottom:2rem; }
+  .e-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:1rem; }
+  .e-card { display:block; text-decoration:none; background:white; border:1px solid var(--linen);
+    border-radius:3px; padding:1.25rem 1.35rem; transition:border-color 0.3s, transform 0.25s, box-shadow 0.3s; }
+  .e-card:hover { border-color:var(--blue-light); transform:translateY(-2px); box-shadow:0 14px 30px rgba(0,45,90,0.08); }
+  .e-card-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:0.6rem; }
+  .e-sub { font-size:0.66rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--blue); background:var(--blue-pale); border-radius:999px; padding:0.28rem 0.7rem; }
+  .e-arrow { color:var(--stone-light); font-size:0.85rem; transition:color 0.3s, transform 0.3s; }
+  .e-card:hover .e-arrow { color:var(--blue); transform:translate(2px,-2px); }
+  .e-title { font-family:'DM Sans',sans-serif; font-size:0.98rem; font-weight:500; line-height:1.45; color:var(--text-primary); }
+  .e-snip { font-size:0.83rem; font-weight:300; line-height:1.55; color:var(--text-light); margin-top:0.55rem;
+    display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+  .e-empty { font-size:0.9rem; color:var(--text-light); font-style:italic; }
+  .e-none { display:none; text-align:center; padding:4rem 0; color:var(--text-light); font-size:0.95rem; }
+
+  /* DISCLAIMER + CTA */
+  .e-note { max-width:1200px; margin:0 auto; padding:2.5rem 3rem 0; }
+  .e-note p { font-size:0.78rem; line-height:1.7; color:var(--text-light); max-width:820px;
+    border-left:2px solid var(--gold-light); padding-left:1.1rem; }
+  .e-cta { margin:4rem 0 0; padding:5rem 3rem; text-align:center;
+    background:linear-gradient(160deg, #00294F 0%, var(--blue-dark) 60%, var(--blue) 100%); }
+  .e-cta h2 { font-family:'adobe-garamond-pro','Adobe Garamond Pro','Cormorant Garamond',serif;
+    font-size:clamp(2rem,4vw,3rem); font-weight:300; color:white; margin-bottom:1rem; }
+  .e-cta h2 em { font-style:italic; color:var(--gold-light); font-weight:400; }
+  .e-cta p { font-size:1rem; font-weight:300; color:rgba(255,255,255,0.75); max-width:560px; margin:0 auto 2.25rem; line-height:1.7; }
+  .e-cta a { display:inline-block; text-decoration:none; font-size:0.78rem; font-weight:600;
+    letter-spacing:0.12em; text-transform:uppercase; color:var(--charcoal);
+    background:var(--gold-light); padding:1rem 2.4rem; border-radius:2px; transition:background 0.3s, transform 0.2s; }
+  .e-cta a:hover { background:#E2C67E; transform:translateY(-1px); }
+
+  /* FOOTER (matches index.html) */
+  footer { background:var(--charcoal); padding:3.5rem 3rem 2rem; }
+  .footer-inner { max-width:1200px; margin:0 auto; }
+  .footer-top { display:flex; justify-content:space-between; gap:3rem; padding-bottom:2.5rem;
+    border-bottom:1px solid rgba(246,241,235,0.12); }
+  .footer-brand { max-width:350px; }
+  .footer-brand .nav-logo { color:var(--ivory); margin-bottom:1rem; }
+  .footer-brand p { font-size:0.85rem; font-weight:300; line-height:1.7; color:var(--stone); }
+  .footer-contact { text-align:right; display:flex; flex-direction:column; gap:0.5rem; }
+  .footer-contact a { display:block; font-size:0.9rem; color:var(--stone-light); text-decoration:none; transition:color 0.3s; }
+  .footer-contact a:hover { color:var(--blue-light); }
+  .footer-bottom { display:flex; justify-content:space-between; align-items:center; padding-top:1.75rem; }
+  .footer-copy { font-size:0.75rem; color:var(--stone); }
+  .footer-links { display:flex; gap:2rem; }
+  .footer-links a { font-size:0.75rem; color:var(--stone); text-decoration:none; transition:color 0.3s; }
+  .footer-links a:hover { color:var(--stone-light); }
+
+  @media (max-width: 768px) {
+    nav, .chip-bar { padding-left:1.25rem; padding-right:1.25rem; }
+    .nav-links { display:none; }
+    .e-hero { padding:7.5rem 1.25rem 3.25rem; }
+    .e-wrap, .e-note { padding-left:1.25rem; padding-right:1.25rem; }
+    .e-cta { padding:4rem 1.25rem; }
+    footer { padding:3rem 1.25rem 1.75rem; }
+    .footer-top { flex-direction:column; gap:2rem; }
+    .footer-contact { text-align:left; }
+    .footer-bottom { flex-direction:column; gap:1rem; align-items:flex-start; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition:none !important; animation:none !important; }
+    html { scroll-behavior:auto; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="/" class="nav-logo"><img class="lux-dot" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAUCAYAAACeXl35AAABAGlDQ1BpY2MAABiVY2BgPMEABCwGDAy5eSVFQe5OChGRUQrsDxgYgRAMEpOLCxhwA6Cqb9cgai/r4lGHC3CmpBYnA+kPQKxSBLQcaKQIkC2SDmFrgNhJELYNiF1eUlACZAeA2EUhQc5AdgqQrZGOxE5CYicXFIHU9wDZNrk5pckIdzPwpOaFBgNpDiCWYShmCGJwZ3AC+R+iJH8RA4PFVwYG5gkIsaSZDAzbWxkYJG4hxFQWMDDwtzAwbDuPEEOESUFiUSJYiAWImdLSGBg+LWdg4I1kYBC+wMDAFQ0LCBxuUwC7zZ0hHwjTGXIYUoEingx5DMkMekCWEYMBgyGDGQCm1j8/yRb+6wAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAAB3RJTUUH6gQDEyEu0heebwAABelJREFUSMeNVV1sXFcR/mbm3rv//l8nWcdOssR1EltJCKR1BYgmEaJNKYlEgKjAQ5+IVETzgEBUEMRfUwoi6gNUCAkqUYgETVW1tEWFkFKlKIosWpoQuW6cJsb/P+u1d9d79957zvCwtuu0qcQ8nKOZM3M+zTkz3xDeK629+ETzFhxwYzhrwsYPs3y5meh4UfVnhxLpX+1//XfvC/EO/RLkLxwGy4Ok0WOpqYGzlfaPWq8yhcXzj9/kK2uV3VsP4khmHV4KQ3eryL4+lp+sIzqWAa1jQuuZWvW5ycTmpdri8GpM/MAJUOR3wEk8rux+Utn5VJjqaGYbDdUyHYuxzr3YaJZQXBgHADAAbMrfg6/0HMYbV1+kiurOh2LxX+SJnm4F7nOBhEKRAvbmSY4s7Ni2Cpa58xjY+J468W8oSb8CUPB6Zfdh4ySflaBylGyYmNzxBaT3fbue4eHbDuFHiRQuGtP1meyO4xuZftpEtN8B4muzZ4AFtOHnheLzMw1d5WpxGOaOr4NteEgl9gMQxQhAzDGqymTAOWK+VyXezTa6trTroclEJg3pbt2WnVP9Up7pVAvhqAc00jKIan2nZYNDaGdg7NzwwEXc/R3E/ULeSuIJC+66vXPKxMRgV64Q+ZFQTAyqkeuCeKeyHHSmB1zS6B35XHvvCxuIjiWA3FogIoWTULAobFQ/EQIz0NHUlHt+sGWjTxw72ZIO7/nIxlkzPNfAC36cR+bTTATa0zEbXS+kxYJAoEYQHwBxnwPFopC6WAMmnoWbtkhlDRJtFqVRB4sjDqCEFKh3s/BRhjPOIverGowWUzRbSZCCAID8yMHFkXbn41sm7D+vb+DICggakOpfpbtl20gT00EXyKyApnMRvIyFWgIxkMwahD4jrDAEShE72/+dad/vJjjbv2k6ujzRKlYZBICgKysBQLEaIwWBrDktYfn7/LcovDivekZXy0MRa7DwUgobAkszgqDCSLYZAHWvFjWdveWZrqXIwX8mmllXI9cUGQFb2xasKxZQM8TGf0TFq3BOOBqz9jdVYLIeRQjLBBKtl6anMD5BYgqJKRQEB0B/aQoNQQV9uXmbdCNdKTBdzjETC/T1sSzXIvbJho9U+x8e3P7y9yBjhbcw3fih2dtYutJEtxMAEwKZnIGbrP+Kl1JUC4JaUaC2fnGDjWiOHD3vd/KuXMH6kUOhYYqJQWMs0L71BZ0sJ3jJ5987wcJj3tXnopGRC3Wm6WntsR7RRAvRZz2ijAkINgRiaQtYQmncQXXOgQlo9ckEQCas4XK8BTbmKBTo3zRlg4hoS0tJX7u+gf2ABjnyH1SWqeorj75LbROFIUxm8jM7xNmQAt1JBIRLjOqcoDonqC3KamtAAUko2AHSoaEiGP+i9eyHDk2WkjxTSdLYYppUtUom+GYtd8e53c88gPF3CaQunSJmVO1vq9BRIgIUMAHDBCsuBPEUTVtCZHtrSGYNGEB/ZQZtQVkjCEqBBwXBKkBqTktQerph+AUM3Iq8J+aHcK0hP7dTnHVp0Md4GQQKsAdkchGat4YQFyhe8+DPClQBnwiD8UZdiCWJVjpRzRU2/tdAMl155eRN08JZq+RZzH/VPtlI/MU0qEs8i2TWIJ2LoJbgzwmiKqFWZISE8pCbvPGXtnz3VLLJY+hyY2iVbfhjv33323jqvveNMl6rvDn8Z/zBrw4WFU8ZBZJtFqn1BosjLmYueWjrDpHaHAUFwsvXrL3/TKr10+PxzLdUdWTlf8lGpyUoPZO5cRa3EnmvYXtrjyaZR1uY76UKNZcnHQQlQWTJTszKwFtjcuK1JfPDPeK8eSmeLs3vfuCCO/XGqwBnobbKpnYcJNOVc4/+f4Cz82/jcqpzfo/jNqXAd6mSVkivTCtODhT0u0c65PylotaeDOYxd+VPSMcTsG5qQoLyS6TmRX/fiavRr+/CBwndytidP4i94vbkRf4YqF64ofbUE/HU4FerZfwjKmP6nb/f5N+18/OYbe+DEoFq81h69dQHAv4P+bOteRbnCmgAAAAedEVYdGljYzpjb3B5cmlnaHQAR29vZ2xlIEluYy4gMjAxNqwLMzgAAAAUdEVYdGljYzpkZXNjcmlwdGlvbgBzUkdCupBzBwAAAABJRU5ErkJggg==" alt="" />Luminosa Global</a>
+  <ul class="nav-links">
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#reviews">Reviews</a></li>
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#contact">Contact</a></li>
+    <li><a href="/book" class="nav-cta">Book a Consultation</a></li>
+  </ul>
+</nav>
+
+<header class="e-hero">
+  <div class="e-hero-inner">
+    <div class="hero-badge"><span class="hero-badge-line"></span><span class="hero-badge-text">Research Library</span></div>
+    <h1>The Italian Citizenship<br><em>Encyclopedia</em></h1>
+    <p class="e-hero-sub">A curated, searchable index of real community discussions on citizenship by descent — court rulings, Law 74/2025, the judicial process, documents, and everything in between. Every entry links to the original thread.</p>
+    <div class="e-search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input id="searchInput" type="search" placeholder="Search by topic — e.g. 1948, Bologna, minor issue, consulate…" aria-label="Search the encyclopedia">
+      <span class="e-count" id="countLabel"></span>
+    </div>
+  </div>
+</header>
+
+<div class="chip-bar"><div class="chip-track" id="chipTrack">
+<button class="chip" data-target="law">Law 74/2025 &amp; the Tajani Decree<span class="chip-n">40</span></button>
+<button class="chip" data-target="concourt">Constitutional Court &amp; Landmark Rulings<span class="chip-n">12</span></button>
+<button class="chip" data-target="courts">Court-by-Court Outcomes &amp; Case Reports<span class="chip-n">35</span></button>
+<button class="chip" data-target="m1948">1948 Cases &amp; the Maternal Line<span class="chip-n">14</span></button>
+<button class="chip" data-target="process">The Judicial Process, Timelines &amp; Tracking<span class="chip-n">13</span></button>
+<button class="chip" data-target="lawyers">Choosing Lawyers, Agencies &amp; Costs<span class="chip-n">15</span></button>
+<button class="chip" data-target="consulate">The Consulate &amp; Administrative Route<span class="chip-n">17</span></button>
+<button class="chip" data-target="initaly">Applying in Italy &amp; Residency Routes<span class="chip-n">16</span></button>
+<button class="chip" data-target="docs">Documents, Records &amp; Discrepancies<span class="chip-n">17</span></button>
+<button class="chip" data-target="wins">Recognitions &amp; Success Stories<span class="chip-n">3</span></button>
+<button class="chip" data-target="after">After Recognition — Passports, Registration &amp; Family<span class="chip-n">13</span></button>
+<button class="chip" data-target="elig">Eligibility &amp; General Questions<span class="chip-n">46</span></button>
+</div></div>
+
+<main class="e-wrap" id="library">
+<section class="e-section" id="law" data-count="40">
+<div class="e-section-head"><div class="e-badge"><span class="e-badge-line"></span><span class="e-badge-text">40 discussions</span></div>
+<h2>Law 74/2025 &amp; the Tajani Decree</h2><p class="e-desc">The March 2025 decree-law and its conversion into Law 74/2025 redrew eligibility for citizenship by descent. These community threads track how the new rules are being read, challenged, and applied.</p></div>
+<div class="e-grid"><a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1saj7e1/some_italian_judges_are_postponing" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Some Italian judges are postponing citizenship-by-descent cases before June 9, 2026 - practical update on Law 74/2025 and Italian Constitutional Court hearings</h3><p class="e-snip">Some judges are issuing decisions immediately under the current law. Many others, however, are taking a different procedural approach.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1phz9b4/two_italian_sentences_already_dismantle_the" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Two Italian sentences already dismantle the retroactivity of the &#x27;Decree of Shame&#x27;</h3><p class="e-snip">the Milanese Court concluded that the reversal of the burden of proof introduced by the new art. 19-bis can only apply.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/expats/comments/1rtj2q3/bombshell_for_italians_abroad_italians" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/expats</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Bombshell for Italians abroad &amp; Italians&#x27; descendants - new citizenship eligibility limits</h3><p class="e-snip">It also effectively outlaws dual citizenship for the diaspora, as that parent or grandparent must have held solely Italian citizenship.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1kjjy36/court_cases_torino_and_milano_decreto_1948_cases" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Court Cases - Torino and Milano Decreto 1948 Cases</h3><p class="e-snip">The Milano judgment strikes me as more of a gamble, since I think it was mentioned that Milano was one of the courts that joined Bologna in suspending cases.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1so78no/breaking_bologna_court_grants_italian_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">BREAKING: Bologna Court grants Italian Citizenship by descent to 4th-Generation family after Tajani Decree - no Consular appointment before March 27, 2025</h3><p class="e-snip">On April 17, 2026, the Tribunale Ordinario di Bologna recognized Italian citizenship by descent in ruling no. 3335/26.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1tr3cm2/first_favorable_postreform_court_of_bologna" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">First favorable post-reform Court Of Bologna ruling recognizing 3rd and 4th Generation citizenship-by-descent claims is now definitive</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1ttysmq/second_favorable_bologna_court_after_the_tajani" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Second favorable Bologna court after the Tajani Decree Italian citizenship by descent / jure sanguinis: 3rd and 4th generation applicants without a pre-March 27 consular appointment</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1u1jf8j/the_june_9_constitutional_court_hearing_on_law" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">The June 9 Constitutional Court Hearing on Law 74/2025 (Italian Citizenship Reform) - Full English Transcript and subtitled video</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1qp7doc/italian_citizenship_denied_by_court_while_close" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship denied by court while close relatives were approved — has anyone appealed? How long did it take?</h3><p class="e-snip">There is a case on the &quot;minor issue&quot; currently before the highest trial court in Italy.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/PassportPorn/comments/1ks3r9b/a_new_italian_law_restricts_ancestral_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/PassportPorn</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">A new Italian law restricts ancestral citizenship claims</h3><p class="e-snip">the new law states &quot;parents and grandparents hold exclusively italian citizenship&quot;</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1titdhk/recent_tribunal_of_palermo_jure_sanguinis" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Recent Tribunal of Palermo jure sanguinis citizenship decision on a post-Tajani Decree claim involving pre-1922 US marital naturalization</h3><p class="e-snip">Still, the outcome is worth noting because recognition of Italian citizenship jure sanguinis was granted despite the documented pre-Cable Act marital citizenship issue.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/immigration/comments/1jme973/italy_curbs_citizenship_rules_to_end_tenuous" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/immigration</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italy curbs citizenship rules to end tenuous descendant claims</h3><p class="e-snip">I initiated the dual citizenship process 1.5 years ago through a reputable Italy-based legal service — $6,000 fully paid. My paperwork is still in the translation phase, so nowhere near the court yet.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1ablnt2/update_from_my_discussion_with_italian_attorney" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Update from My Discussion with Italian Attorney re: Minor Issue</h3><p class="e-snip">why should I have a &quot;better&quot; line through my mother, who has never really held Italian citizenship, than through my father.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/ExpatFIRE/comments/1r2fhkg/update_on_italian_citizenship_by_ancestry_court" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ExpatFIRE</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Update on Italian citizenship by ancestry - court hearing in March 2026</h3><p class="e-snip">A surprise decree made effective immediately on March 28, 2025, by the Italian government tightened regulations...</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1nuhlnm/minor_issue_in_italian_citizenship_cases_the" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">&quot;Minor issue&quot; in Italian citizenship cases: the burden of proof matters</h3><p class="e-snip">Applicants must prove only that they descend from an Italian citizen, showing the direct line of transmission.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/ExpatFIRE/comments/1jp6fp8/italy_slams_shut_citizenship_by_ancestry" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ExpatFIRE</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italy slams shut citizenship by ancestry</h3><p class="e-snip">All Italians should be alarmed by this decree; if this is not challenged or amended, every Italian could be a future target.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/dualcitizenshipnerds/comments/1g8ag8w/creating_special_civil_courts_for_italian_dual" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/dualcitizenshipnerds</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Creating Special Civil Courts for Italian Dual Citizenship Cases</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1uciimp/second_favorable_bologna_ruling_recognizing" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Second favorable Bologna ruling recognizing post-Decree citizenship to 3rd and 4th generation descendants is now definitive</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/SchengenVisa/comments/1o8fdck/applying_for_italian_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/SchengenVisa</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Applying for Italian citizenship</h3><p class="e-snip">Jan 13, 2026 the Italian Supreme Court is going to settle once and for all the minor issue.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1swhpxq/bologna_court_grants_postreform_citizenship_but" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Bologna court grants post-reform citizenship — but the ruling is more cautious than the headlines suggest</h3><p class="e-snip">It does not create a precedent binding other courts or other judges.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1r7nev5/palermo_court_applies_new_law_and_rejects" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Palermo court applies new law and rejects citizenship applications: decision may be the first to uphold the &quot;Decree of Shame&quot;</h3><p class="e-snip">Obviously not good, we are in Palermo court but assigned to new judge Marrone. We are ATQ, three generations, no minor issue, filed Nov-2025. We have no hearing date yet.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1ovferl/italian_citizenship_law_firm_any_legitimacy" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Citizenship Law Firm — any legitimacy?</h3><p class="e-snip">If one of your parents lived at least two consecutive years after acquiring citizenship and before you were born, you qualify even under the new law.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1t02qw0/summary_italian_constitutional_court_ruling_on" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Summary — Italian Constitutional Court ruling on Law 74/2025</h3><p class="e-snip">The Italian Constitutional Court has upheld the validity of the 2025 citizenship reform (Law 74/2025).</p></a>
+<a class="e-card" href="https://www.reddit.com/r/AskConservatives/comments/1rtkd08/what_are_other_conservatives_thoughts_on_italian" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/AskConservatives</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">What are other conservatives thoughts on Italian reforms to Immigration and Citizenship?</h3><p class="e-snip">there was a lot of abuse of the previous system where people who had a distant Italian ancestor but no real cultural connection to Italy were claiming Italian citizenship.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1s5ro28/italian_citizenship_jure_sanguinis_denied_due_to" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship jure sanguinis denied due to &quot;minor issue&quot; but one grandparent never naturalised. Anyone appealed this?</h3><p class="e-snip">you appear to have a valid line through your GM via the consulates or courts. Regardless, you need to consult with an attorney ASAP</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1m87m00/denied_italian_citizenship_for_my_son_due_to_my" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Denied Italian Citizenship for My Son Due to My Dual Citizenship — Hague Consulate Misinterpreting Law 74/2025?</h3><p class="e-snip">because you lived in Italy for 2 years after acquiring Italian citizenship [at birth], your son should be eligible for regular jure sanguinis</p></a>
+<a class="e-card" href="https://www.reddit.com/r/italianamerican/comments/1quchzr/critical_legislative_alert_last_opportunity_to" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/italianamerican</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">CRITICAL LEGISLATIVE ALERT Last Opportunity to Obtain Italian Citizenship by Descent 2025-2029 Reforms: The Definitive Closure of Administrative Access</h3><p class="e-snip">The judicial route remains open and is your best guarantee: Competent Italian courts maintain their jurisdiction.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/europe/comments/1jlzq0l/italy_curbs_citizenship_rules_to_end_tenuous" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/europe</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italy curbs citizenship rules to end tenuous descendant claims</h3><p class="e-snip">Under existing rules, anyone who can prove they had an Italian ancestor who was alive after March 17, 1861, when the Kingdom of Italy was created, can seek citizenship.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1lbe6xi/registering_a_minor_under_the_new_italian" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Registering a Minor Under The New Italian Citizenship Law: Deadlines &amp; Common Mistakes</h3><p class="e-snip">a minor child born abroad to an Italian citizen parent no longer acquires citizenship automatically at birth jure sanguinis.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1oypvio/italian_citizenship_jure_sanguinis_need_opinions" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Citizenship (Jure Sanguinis) — Need Opinions on My 1948 Case</h3><p class="e-snip">There is a minor issue review expected next Spring in the Supreme Court (Court of Cassation).</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1srmdff/article_3bis_of_italian_citizenship_law_and" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Article 3-bis of Italian Citizenship Law and whether it&#x27;s a violation of ECHR</h3><p class="e-snip">How does this article stand with the 1992 law that allows dual citizenship for Italians? This limitation to me reads as a potential discrimination against Italians living abroad.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1ppdnm2/italian_citizenship_via_court_case_1948_case" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship via court case (1948 case / great-grandfather) - Still viable after the 2024 reform? Seeking current realities.</h3><p class="e-snip">It&#x27;s an investment so I suggest that if you have siblings or any cousins that would be interested in claiming Italian citizenship.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1kqaw0t/italian_citizenship_reform_what_you_need_to_know" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Citizenship Reform: What You Need to Know Now Authors: Avvocato Maria Marinello &amp; Abogado Guillermo Iso of Italian Citizenship Concierge</h3><p class="e-snip">This introduces a kind of &quot;guillotine&quot; mechanism, resulting in the immediate, retroactive, and sudden deprivation of Italian citizenship.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/immigration/comments/1d1zg33/italy_citizenship_is_full_what_do_i_do" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/immigration</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italy Citizenship is full? What do i do?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/dualcitizenshipnerds/comments/1g1glm2/italian_dual_citizenship_protecting_the" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/dualcitizenshipnerds</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Dual Citizenship: Protecting the Citizenship Rights of Italian Minors</h3><p class="e-snip">Italian citizenship for minors is imprescriptible under the 1992 law, meaning it cannot be taken away.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1m6oe9t/court_recognizes_citizenship_of_31" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Court recognizes citizenship of 31 Italian-Brazilians and contradicts Tajani Decree</h3><p class="e-snip">Italian citizenship it is a right subjective, permanent and imprescriptible.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalianCitizenship/comments/1srmgzn/article_3bis_of_italian_citizenship_law_and" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalianCitizenship</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Article 3-bis of Italian Citizenship Law and whether it&#x27;s a violation of ECHR</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1qoq4r7/the_upcoming_seminar_on_italian_citizenship_in" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">The Upcoming Seminar on Italian Citizenship in Light of Legislative Decree D.L. 36/25</h3><p class="e-snip">This is a serious obstacle for descendants who wish to claim their Italian citizenship in the here and now.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalianCitizenship/comments/1ppcm8a/italian_citizenship_via_court_case_1948_case" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalianCitizenship</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship via court case (1948 case / great-grandfather) - Still viable after the 2024 reform? Seeking current realities.</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1m79ey3/help_with_italian_citizenship_by_descent_hit_by" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Help with Italian Citizenship by Descent - Hit by Recent Law Changes</h3><p class="e-snip">Some people with the minor issue are still getting recognized through the courts, but it&#x27;s rare.</p></a></div>
+<p class="e-empty" hidden>No matches in this section.</p></section>
+<section class="e-section" id="concourt" data-count="12">
+<div class="e-section-head"><div class="e-badge"><span class="e-badge-line"></span><span class="e-badge-text">12 discussions</span></div>
+<h2>Constitutional Court &amp; Landmark Rulings</h2><p class="e-desc">From the June 9, 2026 Constitutional Court hearing to Cassazione decisions, these are the rulings shaping whether — and how — descent claims survive.</p></div>
+<div class="e-grid"><a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1ottov6/case_of_minor_seeking_italian_citizenship_is" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Case of minor seeking Italian citizenship is split in Milan with citation to the Constitutional Court</h3><p class="e-snip">With ruling no. 142, of July 31, 2025, the Constitutional Court declared the inadmissibility...</p></a>
+<a class="e-card" href="https://www.reddit.com/r/europe/comments/1suuunx/after_italian_law_change_americans_hope_supreme" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/europe</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">After Italian law change, Americans hope supreme court ruling will reopen door to citizenship</h3><p class="e-snip">They can still become citizens by immigrating, working, learning the language etc. like everyone else.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1meymh8/italian_constitutional_court_confirms_jure" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Constitutional Court confirms jure sanguinis citizenship without generational limits. Check Aprigliano Law Firm&#x27;s key takeaways</h3><p class="e-snip">The Constitutional Court fully confirmed citizenship by descent (jure sanguinis) without generational limits.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1mnnjus/italian_citizenship_by_descent_the_battle_of_all" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Citizenship by Descent: The Battle of All Battles is WON!</h3><p class="e-snip">This landmark decision changes the game for thousands of descendants of Italian immigrants around the world.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1qi8emo/judicial_italian_citizenship_case_doubts_about" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Judicial Italian citizenship case — doubts about filing before March Constitutional Court ruling</h3><p class="e-snip">The specific court (Catanzaro) doesn&#x27;t really matter here.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1nl5r71/update_on_visa_2year_residence_path_to_italian" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Update on Visa: 2-Year Residence Path to Italian Citizenship</h3><p class="e-snip">We expect the matter to end up before the Constitutional Court, with hearings possibly in early 2026.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/15exwbq/important_a_recent_italian_court_ruling_could" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Important: A recent Italian court ruling could affect huge numbers of people seeking citizenship by descent</h3><p class="e-snip">First of all it is not the &quot;unified panel&quot; (sezioni unite) but a simple panel that issued it.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1ph2yep/a_landmark_ruling_victory_through_preparation" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">A Landmark Ruling: Victory Through Preparation</h3><p class="e-snip">We&#x27;ve been hesitant to file our 1948 case before the retroactivity of the DL is resolved by the constitutional court.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1ip8hbk/italian_citizenship_in_court_constitutional_court" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Citizenship in Court: Constitutional Court Judgment Explained</h3><p class="e-snip">This specific case really puts the spotlight on a core question the Constitutional Court is looking at: how far back in time...</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1iomnwp/constitutional_court_sets_hearing_on_italian" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Constitutional Court sets hearing on Italian citizenship - June 24, 2025</h3><p class="e-snip">The Constitutional Court of Italy has scheduled a hearing for June 24, 2025, at 9:30 am, to discuss the constitutionality of the current legislation on Italian citizenship for its jus sanguinis (blood right).</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1snyafx/italian_media_narrative_on_the_constitutional" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Media Narrative on the Constitutional Court press release</h3><p class="e-snip">The Constitutional Court has not &quot;ruled&quot; on anything — As of today, there is only a press release regarding the March 11, 2026 hearing.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1o6ix68/important_united_sections_hearing_set_for_january" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Important United Sections Hearing Set for January 13, 2026: What&#x27;s at Stake for Italian Citizenship by Descent</h3><p class="e-snip">The President of Italy&#x27;s Supreme Court (Corte di Cassazione) has just scheduled what may be the most consequential hearing on Italian citizenship law in years.</p></a></div>
+<p class="e-empty" hidden>No matches in this section.</p></section>
+<section class="e-section" id="courts" data-count="35">
+<div class="e-section-head"><div class="e-badge"><span class="e-badge-line"></span><span class="e-badge-text">35 discussions</span></div>
+<h2>Court-by-Court Outcomes &amp; Case Reports</h2><p class="e-desc">Outcomes vary sharply by tribunal. First-hand reports from Bologna, Palermo, Milan, Florence and beyond on how individual courts are deciding cases right now.</p></div>
+<div class="e-grid"><a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1sutjld/italian_citizenship_courts_in_2026_a_courtbycourt" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship courts in 2026 — a court-by-court breakdown of what&#x27;s actually happening [long post]</h3><p class="e-snip">Between January and April 2026, Italian lawyers practicing in citizenship cases have reported a significant volume of unfavorable decisions across multiple courts.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1px8sl9/italian_citizenship_through_the_courts_4_courts" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship through the courts: 4 courts exempt minors from paying fees</h3><p class="e-snip">Saving a click: the 4 courts are Turin, Palermo, Reggio Calabria, and Naples, and this is not a court level policy, it&#x27;s at the judge&#x27;s discretion.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1hv7q0t/citizenship_granted_in_italian_courts_on_basis_of" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Citizenship granted in Italian courts on basis of NY wait time</h3><p class="e-snip">ATQ cases can be risky and they&#x27;re increasingly becoming... not worth it. I&#x27;ve been through court data recently and the cat&#x27;s definitely out of the bag on this one.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalyExpat/comments/1ueollv/looking_for_tax_advisor_in_milan_usitaly_dual" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalyExpat</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Looking for tax advisor in Milan (US—Italy dual taxation)</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1lv07vs/are_the_italian_courts_approving_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Are the Italian courts approving citizenship applications submitted before 03/28?</h3><p class="e-snip">Yes: * Palermo, pre-1912 1948 case, last week * Catanzaro, 1948 case, 3 weeks ago * Campobasso, pre-1912 1948 case, last month</p></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalyExpat/comments/1ovtmh2/deregistration_process_milan" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalyExpat</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">De-registration process (Milan)</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/europe/comments/1tvn2wv/us_consulate_builder_in_milan_hit_by_court_action" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/europe</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">US consulate builder in Milan hit by court action over alleged worker exploitation</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/milano/comments/1lcockv/fare_il_passaporto_a_milano_con_le_poste_un" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/milano</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Fare il passaporto a Milano con le Poste: un problema risolto?</h3><p class="e-snip">Consiglio a tutti di fare il passaporto all&#x27;ufficio Passaporti di via Cordusio. Rispettano l&#x27;orario dell&#x27;appuntamento e ti danno il passaporto nel giro di un&#x27;ora.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1ixijyu/huge_backlogs_in_florence_court" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Huge backlogs in Florence Court...</h3><p class="e-snip">One case, is completely finished, official Italian certificates in hand. The other has yet to even receive a court date!</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1qi4who/italian_citizenship_judicial_process_passaggio_in" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship judicial process — passaggio in giudicato status after sollecito (Tribunale di Roma)</h3><p class="e-snip">After 80+ days with no update, I sent a sollecito to the civil court and they replied confirming certificate will follow.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1h2836w/the_court_of_bologna_questions_the_legitimacy_of" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">The Court of Bologna questions the legitimacy of jus sanguinis: is the Italian citizenship by descent in danger?</h3><p class="e-snip">Italian citizenship by jus sanguinis is a principle that recognizes citizenship to anyone who is the child of an Italian father or mother, without limits on generation.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/Italian/comments/1lia69o/colombian_couple_with_spanish_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/Italian</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Colombian couple with Spanish citizenship thinking of moving to Milan, honest thoughts?</h3><p class="e-snip">Milan is very international and expat-oriented, so if your goal is to get the Italian experience, practice the language, and stay away from the Latin bubble that&#x27;s not a great city to choose.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1jaf9yo/court_speed" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Court Speed</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/ItaliaCareerAdvice/comments/1spfbc4/job_as_an_architect_in_milan" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItaliaCareerAdvice</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Job as an architect in Milan</h3><p class="e-snip">Italy and especially Milan is full of architects, I know a few personally. Most of them are doing something else.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/18yr4x0/experience_with_jure_sanguinis_through_italian" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Experience with Jure Sanguinis Through Italian Courts</h3><p class="e-snip">Prices vary greatly between cities. I am about to begin the judicial process in the courts of Milan (maternal line case 1948).</p></a>
+<a class="e-card" href="https://www.reddit.com/r/expats/comments/12s8ow6/want_to_move_to_milan_italy_with_girlfriend" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/expats</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Want to Move to Milan, Italy with Girlfriend</h3><p class="e-snip">I understand the Italian Government may grant an entry visa valid for up to 90 days for the unmarried cohabiting partner of an Italian citizen.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalyExpat/comments/1liaywq/colombian_couple_with_spanish_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalyExpat</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Colombian couple with Spanish citizenship thinking of moving to Milan, honest thoughts?</h3><p class="e-snip">Milan is a melting pot, mostly of different Italian cultures, which makes it more &quot;open&quot; to expats than other options in Italy</p></a>
+<a class="e-card" href="https://www.reddit.com/r/europe/comments/1u3759l/foreign_workers_say_they_were_paid_less_than_2_an" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/europe</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Foreign workers say they were paid less than $2 an hour to build a new US Consulate in Milan</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/expats/comments/1rpac6g/live_in_milan_or_paris" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/expats</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Live in Milan or Paris?</h3><p class="e-snip">Paris is slightly more expensive but culturally richer than Milan and more functional/walkable overall.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalyExpat/comments/1qk0fp9/milan_transfer_on_the_table_basically_great" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalyExpat</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Milan transfer on the table, basically great package, family nearby, 4 year plan, but worried about taxes + spouse&#x27;s job (US citizen abroad)</h3><p class="e-snip">If your wife earns or can earn less than 85,000 euros a year, the partita iva regime forefettario is extremely advantageous.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/LegalAdviceIndia/comments/1ucnckv/passport_hold_due_to_crossfir_by_convicted" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/LegalAdviceIndia</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Passport Hold Due to Cross-FIR by Convicted Attackers | Brother&#x27;s Milan Semester at Risk</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1hdoabf/the_bologna_courts_ruling_on_italian_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">The Bologna Court&#x27;s Ruling on Italian Citizenship: A Detailed Analysis by Professor Bonato</h3><p class="e-snip">I would be all for a residence permit for Italian descendants, just not full blown citizenship.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1iesx0k/epic_legal_battle_over_italian_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Epic Legal Battle Over Italian Citizenship: Campobasso vs. Bologna Judges</h3><p class="e-snip">This decision signals continued recognition of descent-based Italian citizenship.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/AmerExit/comments/1gpm3yp/italian_dual_citizen_seeking_move_to_milan" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/AmerExit</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian dual citizen seeking move to Milan</h3><p class="e-snip">Milan is a lovely city, but not cheap at all.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/SameGrassButGreener/comments/1rpag1w/live_in_paris_or_milan" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/SameGrassButGreener</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Live in Paris or Milan?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalyExpat/comments/1u1m2hl/having_trouble_finding_an_apartment_in_milan" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalyExpat</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Having trouble finding an apartment in Milan</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1sxkd1n/european_court_of_justice_considering_legality_of" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">European Court of Justice Considering Legality of Retroactive Romanian Citizenship Law</h3><p class="e-snip">In C-653/25, Autoritatea Naţională pentru Cetăţenie, the Bucharest tribunal has asked the ECJ to opine on Romanian citizenship legislation</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1o8ppis/eight_judges_join_naples_court_in_italian" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Eight judges join Naples Court in Italian citizenship cases</h3><p class="e-snip">Speaking as someone who&#x27;s got a 1.5-year wait for his hearing and (IIRC) 600 or so ahead of me, if some of them come to Salerno, that could help tremendously, too!</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1h9kr51/strategies_for_finding_a_comune_to_apply" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Strategies for finding a comune to apply?</h3><p class="e-snip">Basically, don&#x27;t pick Rome, Milan, Naples or Palermo, they all have massive backlogs and it can take 2+ years to process.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/Avvocati/comments/1qi5az5/italian_citizenship_judicial_process_passaggio_in" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/Avvocati</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship judicial process — passaggio in giudicato status after sollecito (Tribunale di Roma)</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalianCitizenship/comments/1qi4xja/italian_citizenship_judicial_process_passaggio_in" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalianCitizenship</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship judicial process — passaggio in giudicato status after sollecito (Tribunale di Roma)</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalyExpat/comments/1o5fcky/codice_fiscale" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalyExpat</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Codice fiscale</h3><p class="e-snip">I got mine on the spot in Milan from the Agenzia Dell&#x27;Entrate in Ripamonti. It took maybe 15 minutes.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1o9wqtv/report_brescia_salerno_ancona_and_naples_bring" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">report: Brescia, Salerno, Ancona and Naples bring forward Italian citizenship hearings</h3><p class="e-snip">The measure, applied in Brescia, Salerno, Nápoles e Ancona, seeks to alleviate the backlog of cases and speed up the issuance of rulings.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalyTravel/comments/1oh5ei9/time_needed_to_clear_immigration" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalyTravel</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Time needed to clear immigration</h3><p class="e-snip">Trains are regular, but mind which station you depart from in Milan. The MXP trains will stop at many local stations that are of no use to you, plus 3 main Milan stations: Cadorna, Centrale and Garibaldi.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1lfg2zv/torino_piemonte" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Torino (Piemonte)</h3><p class="e-snip">While Brescia appears to have added 30 new judges to address their backlog, and most courts are rumored to be adding judges.</p></a></div>
+<p class="e-empty" hidden>No matches in this section.</p></section>
+<section class="e-section" id="m1948" data-count="14">
+<div class="e-section-head"><div class="e-badge"><span class="e-badge-line"></span><span class="e-badge-text">14 discussions</span></div>
+<h2>1948 Cases &amp; the Maternal Line</h2><p class="e-desc">Claims passing through a woman before January 1, 1948 must go through court. Threads on maternal-line strategy, eligibility, and outcomes.</p></div>
+<div class="e-grid"><a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1rwrq7f/1948_case_registration_stuck_with_agenzia_delle" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">1948 case, registration stuck with Agenzia delle Entrate</h3><p class="e-snip">To get such document, the court is requiring confirmed tax payment to Agenzia delle Entrate, which my lawyers made on 4 December 2025.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalianCitizenship/comments/1h9ja9g/italian_attorney_recommendations" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalianCitizenship</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Attorney Recommendations?</h3><p class="e-snip">If it&#x27;s a JS, you have to go through your local consulate. If it&#x27;s a 1948 case, has to go through the Italian courts.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1jw3kra/is_it_still_worth_filing_a_maternal_line_italian" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Is it still worth filing a maternal line Italian citizenship case in court in Italy in 2025?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1q7qeqt/italian_citizenship_via_grandmother_consulate" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship via grandmother — consulate gamble or straight to court?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1q7qkc0/italian_citizenship_via_grandmother_consulate" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship via grandmother — consulate gamble or straight to court?</h3><p class="e-snip">As a result, under Italian Law 555/1912, she would have been deemed to have automatically lost Italian citizenship upon marriage</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1i2zs6j/which_lawyer_would_you_choose_marco_mellone_or" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Which lawyer would you choose - Marco Mellone or Italian Citizenship Conciege?</h3><p class="e-snip">But Mellone is known to be an expert at 1948 cases.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/IWantOut/comments/un08p8/citizenship_italy_can_i_get_citizenship_through" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/IWantOut</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">[Citizenship] -&gt; Italy: Can I get Citizenship Through my Grandma?</h3><p class="e-snip">Because your grandma came over as a kid, if her parents naturalized when she was a minor, then she automatically got citizenship.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/10wfzms/how_to_go_about_finding_a_lawyer_for_a_1948_case" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">How to go about finding a lawyer for a 1948 case?</h3><p class="e-snip">The Italian court is now rejecting at least some applications via the maternal line, advising that minors lose their citizenship by default.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1kluxvw/avv_grasso_blog_constitutional_vs_cassation_court" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Avv. Grasso Blog: Constitutional vs. Cassation Court in Italian Citizenship</h3><p class="e-snip">I know little about Italian law, but it seems logical that you could make the same legal argument for the 1975 law as was made for the 1948 law.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/199cgfb/seeking_italian_attorney_recommendations_for_1948" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Seeking Italian attorney recommendations for 1948 case.</h3><p class="e-snip">I&#x27;m currently using Grasso, though I interviewed Mellone and Paiano. All of the costs were comparable and they all seem to have a good track record with 1948 cases.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1qsxa63/help_understanding_italian_citizenship_by_descent" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Help understanding Italian citizenship by descent (Belgium, complex 1974 marriage case)</h3><p class="e-snip">If it&#x27;s an involuntarily naturalization that happened after 1948, then the woman and her descendants didn&#x27;t lose Italian citizenship.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/Italian/comments/11961ec/first_step_to_getting_citizenship_by_descent" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/Italian</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">First step to getting citizenship by descent?</h3><p class="e-snip">So, prior to 1948 a woman couldn&#x27;t pass down citizenship, but if your ancestor was born after January 1, 1948...</p></a>
+<a class="e-card" href="https://www.reddit.com/r/Genealogy/comments/11yxtys/italian_dual_citizenship_alternative_1948_route" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/Genealogy</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Dual Citizenship - Alternative 1948 Route Update</h3><p class="e-snip">If you&#x27;re even slightly curious about Italian citizenship just start looking into your family docs.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1ks6l2d/can_i_still_claim_italian_citizenship_if_my_gm" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Can I still claim Italian citizenship if my GM naturalized at 20 and married an Italian?</h3><p class="e-snip">Marrying an Italian citizen after she naturalized might create a potential loophole for you to claim citizenship through her,</p></a></div>
+<p class="e-empty" hidden>No matches in this section.</p></section>
+<section class="e-section" id="process" data-count="13">
+<div class="e-section-head"><div class="e-badge"><span class="e-badge-line"></span><span class="e-badge-text">13 discussions</span></div>
+<h2>The Judicial Process, Timelines &amp; Tracking</h2><p class="e-desc">What actually happens after filing: hearings, passaggio in giudicato, tracking portals, delays, and procedural questions from people inside the pipeline.</p></div>
+<div class="e-grid"><a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1ttxq61/court_petition_or_wait_it_out" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Court Petition or Wait it Out?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1p86pgv/the_italian_citizenship_shakeup_will_language_and" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">The Italian citizenship shake-up: will language and cultural proficiency become mandatory?</h3><p class="e-snip">filing a court petition remains the most effective and cost-efficient route to obtain recognition of your Italian citizenship.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1s6lh28/passagio_in_giudicato_reasonable_expectations_and" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Passagio in Giudicato | Reasonable expectations and doubts about the real timing.</h3><p class="e-snip">If 30 days pass with no appeal filed, your citizenship judgment becomes final, binding, and irreversible.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1sjpcm4/giustizia_civile_website_and_app_not_working_for" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Giustizia Civile website and app not working for people outside of Italy</h3><p class="e-snip">From other european countries is working. So it still accepts IPs that are outside of Italy but within Europe</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1it4g54/rejected_application_after_moving_to_italy" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Rejected application after moving to Italy</h3><p class="e-snip">There is a fast track option, 3 years living in Italy. If you are living in Italy, you can apply for Italian citizenship by residency.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1gl7vil/website_to_track_judicial_case" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Website to track judicial case</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1p61e4u/diving_in_court_process_for_citizenship_by_descent" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Diving In - Court Process for Citizenship by Descent</h3><p class="e-snip">My path: GF: Italian born 1919, married 1954 and died 1993 in US) Naturalized in 1980 —&gt; Father: born in US 1955—&gt; Myself: US born.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalianCitizenship/comments/1gyld4y/italian_citizenship_by_descent" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalianCitizenship</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Citizenship by Descent?</h3><p class="e-snip">But it remains that you can still obtain the citizenship but it would need to be through a judicial process</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1ufewvw/italian_citizenship_process_denied_due_to_agencys" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship process denied due to agency&#x27;s procedural error — Should I appeal or file a lawsuit for damages?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1oe3m17/do_you_really_have_only_60_days_to_appeal_a" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Do you really have only 60 days to appeal a Consulate denial in Italian citizenship-by-descent cases?</h3><p class="e-snip">Your right to have your Italian citizenship recognized has not expired.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1hul1hd/boccadutri_thoughts_and_experience" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Boccadutri - Thoughts and Experience</h3><p class="e-snip">I have even sent the appeal to someone knowledgeable in Italian citizenship law to get a second opinion on the arguments presented.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1k4hvrr/death_during_court_proceedings_for_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Death during court proceedings for citizenship?</h3><p class="e-snip">When a part in a Court proceeding dies, the proceeding gets interrupted.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1st8haq/update_regarding_my_case" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Update regarding my case</h3><p class="e-snip">The second status is indicating that the deadline to submit documents to the court for that review has passed.</p></a></div>
+<p class="e-empty" hidden>No matches in this section.</p></section>
+<section class="e-section" id="lawyers" data-count="15">
+<div class="e-section-head"><div class="e-badge"><span class="e-badge-line"></span><span class="e-badge-text">15 discussions</span></div>
+<h2>Choosing Lawyers, Agencies &amp; Costs</h2><p class="e-desc">Vetting avvocati, comparing service firms, spotting overpriced or illegitimate providers, and understanding what representation should cost.</p></div>
+<div class="e-grid"><a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1pf5l6p/received_an_italian_citizenship_though_court" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Received an Italian citizenship though court, lawyer gave 2 options</h3><p class="e-snip">There are case on Facebook of people finding out years later after getting a passport that their comune never transcribed them.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1sq5wcx/cheapest_and_quickest_path_to_italian_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Cheapest and Quickest path to Italian Citizenship</h3><p class="e-snip">Consulate in Miami is like 3 years and I am truly curious if I can work with an Italian attorney one based in Italy to get it done</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1sg1v21/those_who_have_shipped_their_completed_document" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Those who have shipped their completed document packet to their lawyer in Italy, how long does shipping usually take door to door?</h3><p class="e-snip">My docs were in my translator in Italy&#x27;s hands in 2 days. She then mailed them to my attorney.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/IWantOut/comments/n47ri6/citizenship_italy_lawyerlegal_service_for" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/IWantOut</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">[Citizenship] -&gt; Italy: Lawyer/Legal Service for Obtaining US Background Checks From Europe?</h3><p class="e-snip">But if you truly want a &quot;turnkey&quot; service, there&#x27;s a company advertising it out there (fingerprintstodayitaly.com)</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1kbqg2c/continue_as_3rd_generation_applicant_with_italian" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Continue as 3rd Generation Applicant with Italian Law Firm?</h3><p class="e-snip">I like the firm a lot, and honestly, I like they had a plan that seemed well thought out. I signed it and am going forward with it.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/IWantOut/comments/w9irat/citizenship_italy_usitalian_duel_citizenship_full" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/IWantOut</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">[Citizenship] -&gt; Italy: US-Italian Duel Citizenship full service firms?</h3><p class="e-snip">the Dual U.S. -American Citizenship Facebook Group has a list of servicers with polls and tens of reviews of each service.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalyExpat/comments/13wrr3y/experiences_with_lexia_avvocati_andor_any_other" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalyExpat</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Experiences with Lexia Avvocati and/or any other lawyers helping with Italian citizenship applications?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/expats/comments/1j3mpvu/italian_citizenship_through_descent" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/expats</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship through descent</h3><p class="e-snip">I used Italian Citizenship Assistance (Marco Permunian)which is one of the more expensive full service options.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1likr38/just_got_a_quote_for_a_3rd_party_company_to_help" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Just got a quote for a 3rd party company to help with Italian Citizenship — $11,000 CAD</h3><p class="e-snip">If you don&#x27;t have a lawyer then the most challenging part is getting all of your documents translated into Italian and Apostilled.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/AmerExit/comments/1duqdqw/apply_for_citizenship_in_italy_lawyer_needed" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/AmerExit</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Apply for Citizenship In Italy Lawyer Needed</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/expat/comments/145dxdt/italian_citizenship_by_descent" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/expat</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship by descent</h3><p class="e-snip">I looked into this with some lawyers over there I think it was gonna cost around seven grand but the problem was since I&#x27;m descended from my grandmother side even though by law they can&#x27;t discriminate against you a bunch</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/18ap40j/has_anyone_heard_of_used_italiandualcitizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Has anyone heard of / used &quot;italiandualcitizenship&quot;?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/IWantOut/comments/meq7ib/citizenship_italy_do_i_need_to_hire_a_lawyer" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/IWantOut</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">[Citizenship] -&gt; Italy: Do I need to hire a lawyer?</h3><p class="e-snip">First thing is to know who transmitted the citizenship and from what city they came, with that you have to ask the birth certificate and all other certificates until yours</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1c7kfsh/has_anyone_usedaprigliano_law_firm_for_their" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Has anyone usedAprigliano Law Firm for their citizenship service</h3><p class="e-snip">So far they&#x27;re on the ground getting all the things done in Italy as well as when I procure what I need for my Italian citizenship here stateside.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1r9clhw/arturo_grasso_is_back_italys_highest_courts_are" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Arturo Grasso is back! Italy&#x27;s highest courts are now reviewing key aspects of Italian citizenship by descent.</h3><p class="e-snip">Italian attorney Arturo Grasso joins Tony from Italian Dual Citizenship Assistance to break down the upcoming hearings.</p></a></div>
+<p class="e-empty" hidden>No matches in this section.</p></section>
+<section class="e-section" id="consulate" data-count="17">
+<div class="e-section-head"><div class="e-badge"><span class="e-badge-line"></span><span class="e-badge-text">17 discussions</span></div>
+<h2>The Consulate &amp; Administrative Route</h2><p class="e-desc">Appointment scarcity, consulate-specific quirks, and reports from applicants working through the administrative channel abroad.</p></div>
+<div class="e-grid"><a class="e-card" href="https://www.reddit.com/r/AmerExit/comments/1p3hgpj/i_received_my_italian_citizenship_yesterday" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/AmerExit</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">I Received my Italian Citizenship Yesterday.</h3><p class="e-snip">Got my Italian passport in 3 months. But had a friend that worked at the consulate. Left for Europe July 2023.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/manchester/comments/1ap1xv0/has_anyone_had_any_luck_with_obtaining_an_italian" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/manchester</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Has anyone had any luck with obtaining an italian citizenship appointment at the Manchester consulate?</h3><p class="e-snip">Appointments get fully booked out with 10-20 seconds of it turning 5pm. Yes its ridiculous I know!</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1u8o073/los_angeles_italian_consulate" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Los Angeles Italian Consulate</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/IWantOut/comments/1j5abj3/citizenship_italy_citizenship_by_descent" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/IWantOut</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">[Citizenship] -&gt; Italy: Citizenship by Descent?</h3><p class="e-snip">Italian citizenship law has been interepreted differently by consulates now: upon naturalization as citizens of another country the next generation of Italians lost their citizenship.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/Italian/comments/1d56xqq/italian_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/Italian</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship</h3><p class="e-snip">Italian consulates in the US are like a little taste of bureaucracy from Italy.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/IWantOut/comments/vl03eg/citizenship_italy_citizenship_by_descent_questions" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/IWantOut</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">[Citizenship]-&gt; Italy: Citizenship by Descent Questions?</h3><p class="e-snip">according to what I&#x27;ve read in the italian consulate website, Italian citizens who naturalized in a foreign country while being minors, didn&#x27;t lose their Italian citizenship if their parent retained Italian citizenship.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/expats/comments/v1wr6d/applying_for_italian_citizenship_via_consulate_vs" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/expats</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Applying for Italian citizenship via Consulate vs in Italy.. do I have the option?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/wz55ef/i_am_eligible_for_italian_citizenship_through" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">I am eligible for Italian citizenship through Jure Sanguinis, but am unable to make an appointment in the USA. I&#x27;ll be in Italy starting next week — is it possible to start the citizenship process while I&#x27;m there?</h3><p class="e-snip">Join the US-Italian Dual Citizenship Facebook group to learn much more because I&#x27;ve probably overlooked some things.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/immigration/comments/1szczzf/applying_for_italian_citizenship_via_marriage_at" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/immigration</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Applying for Italian citizenship via marriage at the NYC Italian Consulate</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/USCIS/comments/1azxmqn/italy_at_which_us_embassy_or_consulate_location" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/USCIS</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italy: At which U.S. Embassy or Consulate location will the beneficiary apply for an immigrant visa?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/immigration/comments/1afgdj4/will_i_lose_my_italian_citizenship_if_i_become_a" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/immigration</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Will I lose my Italian citizenship if I become a U.S. Citizen? (Italian consulate says no but want to ask again)</h3><p class="e-snip">since 1992 Italians are allowed dual us and Italian. they give Italian citizenship to us born children of Italians</p></a>
+<a class="e-card" href="https://www.reddit.com/r/IWantOut/comments/zlhvjx/citizenship_italy_how_do_i_claim_citizenship_thru" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/IWantOut</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">[Citizenship] -&gt; Italy: How do I claim citizenship thru my grandma?</h3><p class="e-snip">The process is called Iure Sanguinis. Once you have all the documents you&#x27;ll be able to apply for Citizenship at your local Italian Consulate or if you&#x27;re willing, in Italy.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/melbourne/comments/px0po7/italian_consulate_melbourne_citizenship_by_decent" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/melbourne</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Consulate Melbourne Citizenship by decent process?</h3><p class="e-snip">I went through Italian bureaucracy few times for different reasons and OMG it&#x27;s always a mess,prepare yourself to looooooooog wait and lots of &quot;Pausa Caffè&quot;</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1kqtpcp/help_with_italian_citizenship_issue_rejected_by" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Help with Italian Citizenship Issue — Rejected by Consulate, Need Legal Guidance</h3><p class="e-snip">The consulate told me that since my grandfather was a minor when his father naturalized, he lost his Italian citizenship.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1nx16va/consulate_appointment_after_going_through_italian" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Consulate Appointment after going through Italian Courts...</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1tu68dz/italian_citizenship_via_adoption_can_i_register_a" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship via adoption: Can I register a 1996 UK adoption at the Consulate?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalianCitizenship/comments/1kqtrde/help_with_italian_citizenship_issue_rejected_by" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalianCitizenship</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Help with Italian Citizenship Issue — Rejected by Consulate, Need Legal Guidance</h3></a></div>
+<p class="e-empty" hidden>No matches in this section.</p></section>
+<section class="e-section" id="initaly" data-count="16">
+<div class="e-section-head"><div class="e-badge"><span class="e-badge-line"></span><span class="e-badge-text">16 discussions</span></div>
+<h2>Applying in Italy &amp; Residency Routes</h2><p class="e-desc">Filing from inside Italy: choosing a comune, residency requirements, the two-year work path, permesso di soggiorno, and anagrafe hurdles.</p></div>
+<div class="e-grid"><a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1pjfww1/no_matter_the_generation_2_years_of_work_in_italy" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">&#x27;No matter the generation&#x27;: 2 years of work in Italy and descendant can ask for citizenship</h3><p class="e-snip">Also, as far as I get, that is naturalization and not recognition, so no native citizenship, how does transmission work</p></a>
+<a class="e-card" href="https://www.reddit.com/r/IWantOut/comments/uvrbt7/citizenship_italy_how_to_find_a_good_comune_to" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/IWantOut</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">[Citizenship] -&gt; Italy: How to find a good comune to make the process?</h3><p class="e-snip">Why not move to where your ancestors are from. That comune would be more likely to help you.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalyExpat/comments/1j4uy2q/unable_to_become_resident_in_italy_as_they_cant" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalyExpat</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Unable to become resident in Italy, as they can&#x27;t find me in l&#x27;ufficio anagrafe</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalyExpat/comments/1ujcng3/italy_relocation_any_issues_with_a_7_flat_tax_art" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalyExpat</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italy relocation — any issues with a 7% flat tax (Art. 24-ter) plan while establishing citizenship by residency?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalyExpat/comments/1i8kh6s/permesso_di_soggiorno" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalyExpat</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Permesso di soggiorno</h3><p class="e-snip">I have latvian resident permit. We send the documents online and get the result before 90 days.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1t2u2oh/clarification_on_twoyear_requirement_for_passing" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Clarification on two-year requirement for passing on Italian citizenship</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1lvh6iq/is_pursuing_italian_citizenship_moving_to_italy" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Is pursuing Italian citizenship &amp; moving to Italy worth it?</h3><p class="e-snip">If you are looking to get an Italian job, there hard to find and you better have decent italian.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1keke6s/italian_citizenship_by_applying_in_italy" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship by applying in Italy</h3><p class="e-snip">When DL 36/2025 hit, they were immediately responsive to our query and have been consistently updating us with relative information specific to us applying in Italy.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalianCitizenship/comments/1koa7k3/time_to_process_italian_citizenship_by_residency" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalianCitizenship</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Time to Process Italian Citizenship by Residency</h3><p class="e-snip">In the past, the time was typically around 2 years post application.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/LegalAdviceEurope/comments/1i2d3ci/citizenshippermanent_residency_requirements_in" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/LegalAdviceEurope</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Citizenship/permanent residency requirements in italy</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/AmerExit/comments/1eocvq3/applying_for_citizenship_in_italy" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/AmerExit</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Applying for Citizenship in Italy?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/AmericansinItaly/comments/19e9u43/permesso_di_soggiorno_for_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/AmericansinItaly</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Permesso di Soggiorno for citizenship??</h3><p class="e-snip">No visa is required. You go to Italy with the intent of living there and to claim your right to citizenship.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/expats/comments/vhq48c/italian_citizenship_questions_about_paperwork" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/expats</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Citizenship, Questions about Paperwork, Jure Sanguinis</h3><p class="e-snip">When you &quot;apply in Italy&quot; what you are doing is asking the town (comune) in which you reside (in Italy) to recognize your citizenship eligibility.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/AmericansinItaly/comments/1eocuby/applying_for_citizenship_in_italy_your_experience" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/AmericansinItaly</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Applying for citizenship in Italy: your experience</h3><p class="e-snip">Important to note that as a citizenship applicant you have a valid reason for a PdS, but spouses do not.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1m33lxa/does_anyone_have_experience_having_their" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Does anyone have experience having their citizenship registered in Casal Velino after recognition in an Italian court?</h3><p class="e-snip">It seems everyone&#x27;s comune is different and keep in mind it may slow down in the coming weeks due to staff shortages and vacation time off.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/expats/comments/1s8izb7/is_55k_ral_in_italy_enough_for_a_family_of_two" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/expats</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Is €55k RAL in Italy enough for a family of two + supporting parents?</h3><p class="e-snip">Moving to Italy is a huge step, but honestly, €55k for a Solution Architect role with 6 years of experience feels quite low, even for the Italian market.</p></a></div>
+<p class="e-empty" hidden>No matches in this section.</p></section>
+<section class="e-section" id="docs" data-count="17">
+<div class="e-section-head"><div class="e-badge"><span class="e-badge-line"></span><span class="e-badge-text">17 discussions</span></div>
+<h2>Documents, Records &amp; Discrepancies</h2><p class="e-desc">Certificates, naturalization records, proof of non-renunciation, apostilles, translations, and the name discrepancies that stall files.</p></div>
+<div class="e-grid"><a class="e-card" href="https://www.reddit.com/r/StudyInItaly/comments/1tc6hgm/italian_citizenship_recognized_by_court_but_no" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/StudyInItaly</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship recognized by court, but no documents yet — how should I apply for IMAT?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1lcvtbb/guidance_needed_italian_citizenship_by_marriage" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Guidance needed: Italian citizenship by marriage — documents, translations, legalization process</h3><p class="e-snip">you first gather all documents, you legalize them in their respective country, once you have them all you can then translate them</p></a>
+<a class="e-card" href="https://www.reddit.com/r/IWantOut/comments/18i3luj/citizenship_italy_italian_citizenship_trough" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/IWantOut</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">[Citizenship] -&gt; Italy: Italian Citizenship trough Naturalization, which municipalities have shorter elaboration times?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/Italian/comments/1nez0ym/italian_citizenship_by_naturalization" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/Italian</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship by naturalization</h3><p class="e-snip">So, if you come from &quot;X&quot; but also lived and worked or studied in &quot;Y&quot;, &quot;Z&quot; , the Italian authorities will have to wait for X to reply, before interrogating Y&amp;Z.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/Italian/comments/1g0b0ob/new_citizenship_by_naturalization_law" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/Italian</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">New citizenship by naturalization law</h3><p class="e-snip">I&#x27;m completely in favour of this law considering I know many people who are culturally italian because they were born here and did their entire school years here, and yet are considered immigrants and have fewer rights.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/IWantOut/comments/uwwtng/citizenship_italy_has_anyone_used_service_to" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/IWantOut</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">[Citizenship] -&gt; Italy: Has anyone used service to handle the process?</h3><p class="e-snip">The only thing that I recommend you to look for a paid service is for the Italian birth and marriage certificates.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalyExpat/comments/146y977/waiting_times_for_italian_citizenship_by" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalyExpat</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Waiting times for Italian Citizenship by Naturalization</h3><p class="e-snip">However, some applicants have reported obtaining Italian citizenship as soon one year from the date of application, so waiting times can vary depending on the current workload of the office in which you are applying.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1pi682m/proof_of_nonexistence_of_renunciation_of_italian" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Proof of nonexistence of renunciation of Italian citizenship for Libra &amp; ancestors in direct line - proof that an ancestor never renounced Italian citizenship</h3><p class="e-snip">This states that they have no record of your ancestor ever formally renouncing Italian citizenship</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1jmhdv6/avv_giovanni_di_ruggieros_take_is_that_dl_362025" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Avv. Giovanni di Ruggiero&#x27;s take is that DL 36/2025 is unconstitutional</h3><p class="e-snip">How is someone who was able to get a CONE quicker anymore Italian by blood than someone who didn&#x27;t?</p></a>
+<a class="e-card" href="https://www.reddit.com/r/Italian/comments/pm3wfu/italian_citizenship_through_naturalisation" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/Italian</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship through naturalisation</h3><p class="e-snip">I can still speak italian and im confident enough that i can partake into the italian citizenship test.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/IWantOut/comments/t9ypqc/citizenship_italy_are_these_errors_in_my" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/IWantOut</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">[Citizenship] -&gt; Italy: are these errors in my documents admissible?</h3><p class="e-snip">You just need to be prepared and like the other commenter said, there&#x27;s thousands of comuni and many of the smaller ones barely know how to process citizenship requests while the larger ones are too busy.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1jptjxe/im_officially_an_italian_citizen" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">I&#x27;m officially an Italian citizen! 🇮🇹</h3><p class="e-snip">you need a valid Italian ID document. So I would suggest getting the CIE or Passport, and then sorting out SPID.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/answers/comments/ok00ug/if_you_acquire_italian_citizenship_through" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/answers</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">If you acquire Italian citizenship through naturalization can you call yourself Italian?</h3><p class="e-snip">Legally, yep. That&#x27;s what you would be. A full legal Italian citizen with all the rights and responsibilities that entails.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1gq3t7b/italian_citizenship_certificate" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship certificate</h3><p class="e-snip">If you&#x27;ve been recognized, your &#x27;citizenship certificate&#x27; is your Italian birth certificate.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1m2vjba/certificate_of_italian_citizenship_of_at_least" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">&#x27;Certificate of Italian citizenship of at least one parent, explicitly certifying that they have held citizenship since birth&#x27; — what??</h3><p class="e-snip">You need a &quot;Certificato storico di cittadinanza&quot;, that is a written certified statement on how that person citenship status did change.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1r1bqtm/italian_citizenship_through_marriage_question_re" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship through marriage - question re: type of translations needed</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1ic9l80/clarification_needed_official_translation" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Clarification Needed: Official Translation Requirements for Italian Citizenship by Descent</h3></a></div>
+<p class="e-empty" hidden>No matches in this section.</p></section>
+<section class="e-section" id="wins" data-count="3">
+<div class="e-section-head"><div class="e-badge"><span class="e-badge-line"></span><span class="e-badge-text">3 discussions</span></div>
+<h2>Recognitions &amp; Success Stories</h2><p class="e-desc">Cases that made it through — what worked, how long it took, and what recognition day actually looks like.</p></div>
+<div class="e-grid"><a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1ueft01/recognition_success" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Recognition success! 🇮🇹</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/AmerExit/comments/101yw72/i_applied_for_italian_citizenship_in_september" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/AmerExit</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">I applied for Italian Citizenship in September 2021. AMA.</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1ukl350/recognition_today" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Recognition today 🇮🇹</h3></a></div>
+<p class="e-empty" hidden>No matches in this section.</p></section>
+<section class="e-section" id="after" data-count="13">
+<div class="e-section-head"><div class="e-badge"><span class="e-badge-line"></span><span class="e-badge-text">13 discussions</span></div>
+<h2>After Recognition — Passports, Registration &amp; Family</h2><p class="e-desc">Once recognized: passports, comune transcription, AIRE, registering minors, spouses and civil unions, and life as a new citizen.</p></div>
+<div class="e-grid"><a class="e-card" href="https://www.reddit.com/r/ItalianCitizenship/comments/1umeqkc/living_in_italy" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalianCitizenship</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Living in Italy</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalianCitizenship/comments/1saat19/italian_citizenship_thru_marriage" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalianCitizenship</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship thru marriage-</h3><p class="e-snip">Change your US passport back to your maiden name or get the court order because Italy will not put a married name in a passport without it.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1uj3brp/help_pleasefather_is_getting_italian_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Help Please...Father is getting italian citizenship, can I get it once he has his?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1o7mmtw/italian_citizenship_by_civil_union_but_i_have_an" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Citizenship by Civil Union but I have an arrest record!</h3><p class="e-snip">is there a way for a person with charges to get Italian citizenship by any way? Or is the person f&#x27;d for life?</p></a>
+<a class="e-card" href="https://www.reddit.com/r/AmericansinItaly/comments/1l7avi6/working_in_italy_as_a_us_citizen" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/AmericansinItaly</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Working In Italy as a US Citizen</h3><p class="e-snip">Italy has a never ending supply of English/music teachers. Italy needs STEM. (Italy also needs blue collar workers</p></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalyExpat/comments/1pw4e9j/leaving_brazil_for_italy" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalyExpat</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Leaving Brazil for Italy</h3><p class="e-snip">since you have italian citizenship/ passport, you can live anywhere in the EU! so you can even move to austria, or germany/ Netherlands.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1um2s8j/how_hard_is_it_to_get_your_italian_passport_name" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">How hard is it to get your Italian Passport name changed to match your birth-country one?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1sf8rv0/ggm_gained_italian_citizenship_via_marriage_in" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">GGM Gained Italian Citizenship via Marriage in 1912. How to prove it?</h3><p class="e-snip">I would get the legal opinion letter, file with that, and then if the Italian courts take issue with it, now you have a controversy</p></a>
+<a class="e-card" href="https://www.reddit.com/r/GermanCitizenship/comments/1j30n4o/italian_citizenship_by_descent_will_it_interfere" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/GermanCitizenship</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship by descent - will it interfere with German citizenship?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalyExpat/comments/1kstrm9/leaving_italyderegistering" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalyExpat</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Leaving Italy/Deregistering</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1kfi16i/leaving_after_getting_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Leaving after getting citizenship</h3><p class="e-snip">There were recent changes to getting Italian citizenship jur sanguinis.....a recent circulare made some significant changes to the process.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalianCitizenship/comments/1lvv7m6/italian_citizenship_eligibility_and_same_sex" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalianCitizenship</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Citizenship eligibility and same sex marriage with two young IVF children</h3><p class="e-snip">for your wife to be eligible for Italian citizenship she needs to have at least on parent or grandparent that were solely Italian citizens</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1isss2m/postmortem_paternity_recognition_italian" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Post-Mortem Paternity Recognition &amp; Italian Citizenship — Is Delibazione Needed?</h3></a></div>
+<p class="e-empty" hidden>No matches in this section.</p></section>
+<section class="e-section" id="elig" data-count="46">
+<div class="e-section-head"><div class="e-badge"><span class="e-badge-line"></span><span class="e-badge-text">46 discussions</span></div>
+<h2>Eligibility &amp; General Questions</h2><p class="e-desc">The broadest category: line-by-line eligibility scenarios, generational limits, dual-citizenship basics, and first-step questions.</p></div>
+<div class="e-grid"><a class="e-card" href="https://www.reddit.com/r/Italian/comments/1ul5u3r/how_can_i_claim_my_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/Italian</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">How can I claim my citizenship?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/dualcitizenshipnerds/comments/1tzc9dn/italian_citizenship_by_descent" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/dualcitizenshipnerds</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship by descent</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1ulp2h3/need_help_understanding_my_eligibility_under" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Need help understanding my eligibility under Italy&#x27;s new citizenship law</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/italy/comments/1jka3w6/my_dream_italian_citizenship_law" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/italy</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">My dream Italian citizenship law</h3><p class="e-snip">Italian embassies and comuni are drowned with citizenship applications through long-lost relatives...</p></a>
+<a class="e-card" href="https://www.reddit.com/r/SchengenVisa/comments/1ulw9qj/italian_citizenship_by_descent" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/SchengenVisa</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship by descent</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/expats/comments/113bpfk/grandfather_is_italian_can_i_apply_for_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/expats</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Grandfather is Italian, can I apply for citizenship ?</h3><p class="e-snip">If he never renounced his citizenship or lost it by naturalizing as a citizen or another country then your mother is a citizen and you by extension</p></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalianCitizenship/comments/1gbsdcw/do_you_really_want_italian_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalianCitizenship</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Do you really want Italian citizenship?</h3><p class="e-snip">My ancestors on both sides were Italians for centuries. One of my grandfathers was an Italian officer in WW1.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/IWantOut/comments/1546erz/citizenship_italy_am_i_eligible_for_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/IWantOut</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">[Citizenship] -&gt; Italy: Am I eligible for citizenship by descent?</h3><p class="e-snip">Congrats, you&#x27;re an unregistered Italian citizen. Hit up the Dual US Italian Citizenship FB group which is the best resource there is for the recognition process.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/Citizenship/comments/1jka45z/my_dream_italian_citizenship_law" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/Citizenship</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">My dream Italian citizenship law</h3><p class="e-snip">An Italian citizen who has reached the age of twenty-five (25) and is legally domiciled abroad shall automatically lose Italian citizenship...</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1uci8tw/complicated_1992_italian_citizenship_question" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Complicated 1992 Italian Citizenship Question — Father Naturalized 48 Days Before Law Change</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalianCitizenship/comments/1o5roh5/italian_citizenship_as_a_greatgreatgrandchild" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalianCitizenship</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Citizenship as a Great-Great-Grandchild</h3><p class="e-snip">We went ahead with that option and, after quite a while (it wasn&#x27;t a short process), I finally managed to obtain my Italian citizenship.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/AmerExit/comments/y90ty6/applying_for_citizenship_by_descent_in_italy" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/AmerExit</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Applying for Citizenship by Descent in Italy</h3><p class="e-snip">Its pretty disingenuous to not post up some costs other than your rent/car rental. There are so many people running Italian citizenship scams.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1fvi0bp/italian_citizenship_process_in_the_italian_court" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Citizenship Process in the Italian Court - Do I Have What I Need?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1tivegf/would_like_the_extent_of_my_eligibility_for" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Would Like the Extent of my Eligibility for Italian Citizenship (by Descent) Assessed - with Corresponding Suggestions/Advice for the Quickest Way to Obtain/Recognize Citizenship</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/LegalAdviceEurope/comments/1grnp2i/inquiry_about_citizenship_laws_in_italy" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/LegalAdviceEurope</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Inquiry about citizenship laws in Italy.</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/mortgageItalyexpats/comments/1nheqax/dual_italian_citizenship_requirements_and" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/mortgageItalyexpats</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Dual Italian citizenship: requirements and advantages</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/AmerExit/comments/1druavu/how_to_get_italian_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/AmerExit</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">how to get italian citizenship?</h3><p class="e-snip">Check out the Dual US Italian Citizenship Facebook group and website! It&#x27;s one of the best resources.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/expats/comments/v11va5/does_anyone_know_anything_about_italian" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/expats</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Does anyone know anything about Italian citizenship rules? Specifically Jure Sanguinis.</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/LegalAdviceEurope/comments/184hrqw/italian_citizenship_after_shoplifting" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/LegalAdviceEurope</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Citizenship after shoplifting</h3><p class="e-snip">It really depends on how it all went down. Was the police called? If yes, did they take your statement and inform you of the next steps?</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1i5sbb2/a_recommendation_for_those_using_an_organization" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">A Recommendation for those using an organization for help.</h3><p class="e-snip">They are absolutely incredible and the time from initiation of contract to recognition of citizenship was under two years.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/Italian/comments/1jtoev0/italian_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/Italian</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Citizenship</h3><p class="e-snip">For the Citizenship, you are ineligible with the latest rules, unless your parents where italians and lived in italy for 2 years prior to your bith.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/italy/comments/bbs7wm/italian_citizenship_rights" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/italy</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Citizenship Rights</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalianCitizenship/comments/1rvcoht/strange_italian_citizenship_situation" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalianCitizenship</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Strange Italian Citizenship situation...</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/expats/comments/1c1gg7s/obtaining_italian_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/expats</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Obtaining Italian Citizenship</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/expats/comments/1qojsrd/italian_citizenship_through_decent" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/expats</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Citizenship Through Decent</h3><p class="e-snip">If your mother never naturalized as a Canadian and holds her Italian citizenship still, you can likely pursue JS.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/IWantOut/comments/1dlmp8w/citizenship_italy_just_wasting_my_time" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/IWantOut</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">[Citizenship] -&gt; Italy: Just Wasting My Time?</h3><p class="e-snip">I understand that because this would be going through a female branch, I would need to try to get Italian citizenship by going to the courts.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/expats/comments/x7pe2z/advice_about_italian_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/expats</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">advice about Italian citizenship</h3><p class="e-snip">I&#x27;m using &quot;Italian Citizenship Assistance&quot; and they do offer a money back guarantee.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/Italian/comments/1rwf4vw/confused_by_the_citizenship_laws_is_it_possible" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/Italian</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">confused by the citizenship laws, is it possible for me to get my citizenship?</h3><p class="e-snip">The crucial question is: do you have any of your Italian nonni who either was a single citizen when you were born or who died with only Italian citizenship</p></a>
+<a class="e-card" href="https://www.reddit.com/r/AmerExit/comments/w7auu0/italian_citizenship_jure_sanguinis_infographic" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/AmerExit</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Citizenship Jure Sanguinis Infographic</h3><p class="e-snip">An ancestor who was naturalized non voluntarily did not renounce Italian citizenship.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/IWantOut/comments/vfofwe/citizenship_italy_how_to_get_italian_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/IWantOut</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">[Citizenship] -&gt; Italy: How to get Italian citizenship through great-grandparents?</h3><p class="e-snip">Depending on which part of Argentina your great-grandfather settled, in the overwhelming majority of cases they didn&#x27;t renounce Italian citizenship</p></a>
+<a class="e-card" href="https://www.reddit.com/r/dualcitizenshipnerds/comments/1txcf5e/unsure_if_im_eligible_for_italian_citizenship_i" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/dualcitizenshipnerds</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Unsure if I&#x27;m eligible for Italian citizenship. I don&#x27;t think I am, but here are a few details..I wanted to know if I should even bother pursuing this...</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/SchengenVisa/comments/1s4d6g4/am_i_cooked_italian_citizenship_by_decent" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/SchengenVisa</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Am I cooked? Italian citizenship by decent</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/vgr5h0/italiangerman_citizenship_doubts" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian-German citizenship doubts</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/dualcitizenshipnerds/comments/1f431ze/how_do_i_obtain_italian_american_dual_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/dualcitizenshipnerds</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">How do I obtain Italian, American Dual Citizenship?</h3><p class="e-snip">My entire family is getting our Italian citizenship, a group of almost 35 of us with the help of italiancitizenshipassistance.com</p></a>
+<a class="e-card" href="https://www.reddit.com/r/IWantOut/comments/pyex1i/citizenship_italy_citizenship_by_descent" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/IWantOut</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">[Citizenship] -&gt; Italy: citizenship by descent?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/mortgageItalyexpats/comments/1h3gjxg/how_to_obtain_italian_citizenship_by_descent_from" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/mortgageItalyexpats</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">How to obtain Italian citizenship by descent from Italian relatives who emigrated abroad</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/expats/comments/waidz2/spanish_or_italian_citizenship_through_great" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/expats</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Spanish or Italian citizenship through great grandparents?</h3><p class="e-snip">My cousin is currently applying for Italian citizenship thru great-grandparent.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/LegalAdviceEurope/comments/1ath64j/italian_citizenship_by_descent" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/LegalAdviceEurope</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian citizenship by descent</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/IWantOut/comments/wfu90o/citizenship_italy_could_my_get_citizenship_by" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/IWantOut</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">[Citizenship] -&gt; Italy: Could my get citizenship by descent?</h3><p class="e-snip">If the line was cut, your wife is still eligible for a process to reacquire citizenship in an expedited manner.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1nm6xrk/could_i_got_italian_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Could I got Italian citizenship ?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/ItalianCitizenship/comments/15qdy00/italian_dual_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/ItalianCitizenship</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian Dual Citizenship</h3><p class="e-snip">Feel free to contact us via email so we can check your eligibility to claim your Italian citizen through the Court path.</p></a>
+<a class="e-card" href="https://www.reddit.com/r/CitizenshipByDescent/comments/1ucl386/complicated_1992_italian_citizenship_question" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/CitizenshipByDescent</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Complicated 1992 Italian Citizenship Question — Father Naturalized 48 Days Before Law Change</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/IWantOut/comments/uxxyys/citizenship_italy_can_i_claim_citizenship_through" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/IWantOut</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">[Citizenship]-&gt; Italy: Can I claim citizenship through my father?</h3><p class="e-snip">So the Italian citizenship is a &quot;depends&quot;. Did he naturalize in the US after 1992 and keep his Italian citizenship?</p></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1ki08j8/grandpa_reaquired_italian_citizenship_does_this" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Grandpa reaquired Italian citizenship - does this change the game?</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/LegalAdviceEurope/comments/15xwwvc/italianus_dual_citizenship" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/LegalAdviceEurope</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Italian-US dual citizenship</h3></a>
+<a class="e-card" href="https://www.reddit.com/r/juresanguinis/comments/1gfwdhi/eligibility_for_italian_citizenship_by_descent" target="_blank" rel="noopener noreferrer">
+<div class="e-card-top"><span class="e-sub">r/juresanguinis</span><span class="e-arrow">↗</span></div>
+<h3 class="e-title">Eligibility for italian citizenship by descent through grandparents</h3></a></div>
+<p class="e-empty" hidden>No matches in this section.</p></section>
+<p class="e-none" id="noResults">No discussions match that search. Try a broader term — or ask us directly.</p>
+</main>
+
+<div class="e-note">
+  <p><strong>A note on these links.</strong> This library indexes public discussions from third-party communities. Luminosa Global does not author, verify, or endorse their content, and nothing here is legal advice. Italian citizenship law is evolving quickly — court practice varies by tribunal and individual circumstances always control. For guidance on your specific case, speak with us directly.</p>
+</div>
+
+<section class="e-cta">
+  <h2>Questions the internet <em>can't</em> answer?</h2>
+  <p>Community threads show you the landscape. A consultation shows you your path — reviewed against your family line, your documents, and the current state of the courts.</p>
+  <a href="/book">Book a Consultation</a>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo"><img class="lux-dot" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAUCAYAAACeXl35AAABAGlDQ1BpY2MAABiVY2BgPMEABCwGDAy5eSVFQe5OChGRUQrsDxgYgRAMEpOLCxhwA6Cqb9cgai/r4lGHC3CmpBYnA+kPQKxSBLQcaKQIkC2SDmFrgNhJELYNiF1eUlACZAeA2EUhQc5AdgqQrZGOxE5CYicXFIHU9wDZNrk5pckIdzPwpOaFBgNpDiCWYShmCGJwZ3AC+R+iJH8RA4PFVwYG5gkIsaSZDAzbWxkYJG4hxFQWMDDwtzAwbDuPEEOESUFiUSJYiAWImdLSGBg+LWdg4I1kYBC+wMDAFQ0LCBxuUwC7zZ0hHwjTGXIYUoEingx5DMkMekCWEYMBgyGDGQCm1j8/yRb+6wAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAAB3RJTUUH6gQDEyEu0heebwAABelJREFUSMeNVV1sXFcR/mbm3rv//l8nWcdOssR1EltJCKR1BYgmEaJNKYlEgKjAQ5+IVETzgEBUEMRfUwoi6gNUCAkqUYgETVW1tEWFkFKlKIosWpoQuW6cJsb/P+u1d9d79957zvCwtuu0qcQ8nKOZM3M+zTkz3xDeK629+ETzFhxwYzhrwsYPs3y5meh4UfVnhxLpX+1//XfvC/EO/RLkLxwGy4Ok0WOpqYGzlfaPWq8yhcXzj9/kK2uV3VsP4khmHV4KQ3eryL4+lp+sIzqWAa1jQuuZWvW5ycTmpdri8GpM/MAJUOR3wEk8rux+Utn5VJjqaGYbDdUyHYuxzr3YaJZQXBgHADAAbMrfg6/0HMYbV1+kiurOh2LxX+SJnm4F7nOBhEKRAvbmSY4s7Ni2Cpa58xjY+J468W8oSb8CUPB6Zfdh4ySflaBylGyYmNzxBaT3fbue4eHbDuFHiRQuGtP1meyO4xuZftpEtN8B4muzZ4AFtOHnheLzMw1d5WpxGOaOr4NteEgl9gMQxQhAzDGqymTAOWK+VyXezTa6trTroclEJg3pbt2WnVP9Up7pVAvhqAc00jKIan2nZYNDaGdg7NzwwEXc/R3E/ULeSuIJC+66vXPKxMRgV64Q+ZFQTAyqkeuCeKeyHHSmB1zS6B35XHvvCxuIjiWA3FogIoWTULAobFQ/EQIz0NHUlHt+sGWjTxw72ZIO7/nIxlkzPNfAC36cR+bTTATa0zEbXS+kxYJAoEYQHwBxnwPFopC6WAMmnoWbtkhlDRJtFqVRB4sjDqCEFKh3s/BRhjPOIverGowWUzRbSZCCAID8yMHFkXbn41sm7D+vb+DICggakOpfpbtl20gT00EXyKyApnMRvIyFWgIxkMwahD4jrDAEShE72/+dad/vJjjbv2k6ujzRKlYZBICgKysBQLEaIwWBrDktYfn7/LcovDivekZXy0MRa7DwUgobAkszgqDCSLYZAHWvFjWdveWZrqXIwX8mmllXI9cUGQFb2xasKxZQM8TGf0TFq3BOOBqz9jdVYLIeRQjLBBKtl6anMD5BYgqJKRQEB0B/aQoNQQV9uXmbdCNdKTBdzjETC/T1sSzXIvbJho9U+x8e3P7y9yBjhbcw3fih2dtYutJEtxMAEwKZnIGbrP+Kl1JUC4JaUaC2fnGDjWiOHD3vd/KuXMH6kUOhYYqJQWMs0L71BZ0sJ3jJ5987wcJj3tXnopGRC3Wm6WntsR7RRAvRZz2ijAkINgRiaQtYQmncQXXOgQlo9ckEQCas4XK8BTbmKBTo3zRlg4hoS0tJX7u+gf2ABjnyH1SWqeorj75LbROFIUxm8jM7xNmQAt1JBIRLjOqcoDonqC3KamtAAUko2AHSoaEiGP+i9eyHDk2WkjxTSdLYYppUtUom+GYtd8e53c88gPF3CaQunSJmVO1vq9BRIgIUMAHDBCsuBPEUTVtCZHtrSGYNGEB/ZQZtQVkjCEqBBwXBKkBqTktQerph+AUM3Iq8J+aHcK0hP7dTnHVp0Md4GQQKsAdkchGat4YQFyhe8+DPClQBnwiD8UZdiCWJVjpRzRU2/tdAMl155eRN08JZq+RZzH/VPtlI/MU0qEs8i2TWIJ2LoJbgzwmiKqFWZISE8pCbvPGXtnz3VLLJY+hyY2iVbfhjv33323jqvveNMl6rvDn8Z/zBrw4WFU8ZBZJtFqn1BosjLmYueWjrDpHaHAUFwsvXrL3/TKr10+PxzLdUdWTlf8lGpyUoPZO5cRa3EnmvYXtrjyaZR1uY76UKNZcnHQQlQWTJTszKwFtjcuK1JfPDPeK8eSmeLs3vfuCCO/XGqwBnobbKpnYcJNOVc4/+f4Cz82/jcqpzfo/jNqXAd6mSVkivTCtODhT0u0c65PylotaeDOYxd+VPSMcTsG5qQoLyS6TmRX/fiavRr+/CBwndytidP4i94vbkRf4YqF64ofbUE/HU4FerZfwjKmP6nb/f5N+18/OYbe+DEoFq81h69dQHAv4P+bOteRbnCmgAAAAedEVYdGljYzpjb3B5cmlnaHQAR29vZ2xlIEluYy4gMjAxNqwLMzgAAAAUdEVYdGljYzpkZXNjcmlwdGlvbgBzUkdCupBzBwAAAABJRU5ErkJggg==" alt="" />Luminosa Global</a>
+        <p>International consultancy specializing in Italian dual citizenship, passports, and residency for families of Italian descent.</p>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:drmeschino@luminosa.global">drmeschino@luminosa.global</a>
+        <a href="tel:13122176730">+1 (312) 217-6730</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 Luminosa Global Inc. All Rights Reserved.</span>
+      <div class="footer-links">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms-and-conditions.html">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var input = document.getElementById('searchInput');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.e-card'));
+  var sections = Array.prototype.slice.call(document.querySelectorAll('.e-section'));
+  var countLabel = document.getElementById('countLabel');
+  var noResults = document.getElementById('noResults');
+  var total = cards.length;
+  countLabel.textContent = total + ' entries';
+
+  cards.forEach(function(c) { c.dataset.text = c.textContent.toLowerCase(); });
+
+  function filter() {
+    var q = input.value.trim().toLowerCase();
+    var visible = 0;
+    sections.forEach(function(sec) {
+      var secVisible = 0;
+      sec.querySelectorAll('.e-card').forEach(function(c) {
+        var show = !q || c.dataset.text.indexOf(q) !== -1;
+        c.style.display = show ? '' : 'none';
+        if (show) secVisible++;
+      });
+      visible += secVisible;
+      sec.style.display = secVisible ? '' : 'none';
+      var badge = sec.querySelector('.e-badge-text');
+      badge.textContent = (q ? secVisible : sec.dataset.count) + ' discussions';
+    });
+    countLabel.textContent = (q ? visible + ' of ' + total : total) + ' entries';
+    noResults.style.display = visible ? 'none' : 'block';
+  }
+  var t; input.addEventListener('input', function() { clearTimeout(t); t = setTimeout(filter, 120); });
+
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  chips.forEach(function(ch) {
+    ch.addEventListener('click', function() {
+      chips.forEach(function(o) { o.classList.remove('active'); });
+      ch.classList.add('active');
+      var sec = document.getElementById(ch.dataset.target);
+      if (sec) sec.scrollIntoView({ behavior:'smooth', block:'start' });
+    });
+  });
+})();
+</script>
+</body>
+</html>
