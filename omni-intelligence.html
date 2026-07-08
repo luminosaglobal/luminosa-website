@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omni Intelligence | Court-by-Court Citizenship Insights — Luminosa Global</title>
+<meta name="description" content="Omni Intelligence™ by Luminosa Global — search and compare how Italian courts are handling citizenship-by-descent cases: trends, predictability ratings, key issues, and questions to ask your attorney.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #005CAF;
+    --blue-dark: #004A8C;
+    --blue-light: #1A75C7;
+    --blue-pale: #E8F0F8;
+    --ivory: #F6F1EB;
+    --warm-white: #FAF8F5;
+    --charcoal: #2A2A28;
+    --gold: #B8963E;
+    --gold-light: #D4B366;
+    --stone: #A69B8D;
+    --stone-light: #C8BFAE;
+    --linen: #EDE6DC;
+    --text-primary: #2A2A28;
+    --text-secondary: #5A5852;
+    --text-light: #8A857D;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--warm-white);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.4rem 4rem;
+    background: rgba(250,248,245,0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--linen);
+    transition: padding .3s ease;
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 600; letter-spacing: .04em;
+    color: var(--charcoal); text-decoration: none;
+    display: flex; align-items: center; gap: .5rem;
+  }
+  .nav-links { display: flex; align-items: center; gap: 2.2rem; list-style: none; }
+  .nav-links a {
+    color: var(--text-secondary); text-decoration: none;
+    font-size: .85rem; font-weight: 500; letter-spacing: .05em;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px;
+    background: var(--blue); transition: width .3s ease;
+  }
+  .nav-links a:hover { color: var(--blue); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-links a.active { color: var(--blue); }
+  .nav-cta {
+    background: var(--blue); color: #fff !important;
+    padding: .65rem 1.4rem; border-radius: 2px;
+    transition: background .3s ease;
+  }
+  .nav-cta:hover { background: var(--blue-dark); }
+  .nav-cta::after { display: none !important; }
+  .mobile-toggle { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; }
+  .mobile-toggle span { width: 24px; height: 2px; background: var(--charcoal); display: block; }
+  .mobile-close { display: none; }
+
+  /* ─── HERO / SEARCH CONSOLE ─── */
+  .hero {
+    padding: 9.5rem 2rem 3.5rem;
+    background: linear-gradient(180deg, var(--ivory) 0%, var(--warm-white) 100%);
+    text-align: center;
+    border-bottom: 1px solid var(--linen);
+  }
+  .hero-eyebrow {
+    font-size: .75rem; letter-spacing: .25em; text-transform: uppercase;
+    color: var(--gold); font-weight: 600; margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 500; line-height: 1.1; color: var(--charcoal);
+    max-width: 760px; margin: 0 auto .9rem;
+  }
+  .hero h1 em { font-style: italic; color: var(--blue); }
+  .hero p.lede {
+    color: var(--text-secondary); font-weight: 300; font-size: 1.02rem;
+    max-width: 640px; margin: 0 auto 2.2rem; line-height: 1.7;
+  }
+
+  .search-shell { max-width: 720px; margin: 0 auto; }
+  .search-box {
+    display: flex; align-items: center; gap: .8rem;
+    background: #fff; border: 1px solid var(--stone-light);
+    border-radius: 3px; padding: .35rem .5rem .35rem 1.2rem;
+    box-shadow: 0 12px 32px rgba(42,42,40,.07);
+    transition: border-color .25s ease, box-shadow .25s ease;
+  }
+  .search-box:focus-within { border-color: var(--blue); box-shadow: 0 12px 32px rgba(0,92,175,.12); }
+  .search-box svg { flex: none; }
+  .search-box input {
+    flex: 1; border: none; outline: none; background: transparent;
+    font-family: 'DM Sans', sans-serif; font-size: 1rem; color: var(--text-primary);
+    padding: .8rem 0; min-width: 0;
+  }
+  .search-box input::placeholder { color: var(--text-light); font-weight: 300; }
+  .search-clear {
+    border: none; background: var(--blue-pale); color: var(--blue);
+    font-size: .78rem; font-weight: 500; letter-spacing: .04em;
+    padding: .55rem .9rem; border-radius: 2px; cursor: pointer; display: none;
+  }
+  .search-clear.show { display: block; }
+
+  /* ─── FILTER BAR ─── */
+  .filters {
+    max-width: 1120px; margin: 0 auto; padding: 1.8rem 2rem .4rem;
+  }
+  .filter-group { margin-bottom: 1.1rem; }
+  .filter-label {
+    font-size: .68rem; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--text-light); font-weight: 600; margin-bottom: .55rem;
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .chip {
+    font-family: 'DM Sans', sans-serif; font-size: .8rem; font-weight: 500;
+    color: var(--text-secondary); background: #fff;
+    border: 1px solid var(--linen); border-radius: 20px;
+    padding: .42rem 1rem; cursor: pointer;
+    transition: all .2s ease;
+  }
+  .chip:hover { border-color: var(--blue-light); color: var(--blue); }
+  .chip.on { background: var(--blue); border-color: var(--blue); color: #fff; }
+  .chip.on.gold-chip { background: var(--gold); border-color: var(--gold); }
+
+  .results-bar {
+    max-width: 1120px; margin: 0 auto; padding: .4rem 2rem 0;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  }
+  .results-count { font-size: .85rem; color: var(--text-light); font-weight: 300; }
+  .results-count strong { color: var(--blue); font-weight: 600; }
+  .sort-wrap { display: flex; align-items: center; gap: .5rem; font-size: .8rem; color: var(--text-light); }
+  .sort-wrap select {
+    font-family: 'DM Sans', sans-serif; font-size: .8rem; color: var(--text-primary);
+    border: 1px solid var(--linen); background: #fff; border-radius: 2px;
+    padding: .4rem .6rem; cursor: pointer; outline: none;
+  }
+
+  /* ─── COURT CARDS ─── */
+  .grid {
+    max-width: 1120px; margin: 0 auto; padding: 1.6rem 2rem 4rem;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 1.4rem;
+    align-items: start;
+  }
+  .card {
+    background: #fff; border: 1px solid var(--linen); border-radius: 3px;
+    padding: 1.7rem 1.7rem 1.4rem; position: relative;
+    transition: box-shadow .25s ease, transform .25s ease;
+  }
+  .card:hover { box-shadow: 0 16px 38px rgba(42,42,40,.08); transform: translateY(-2px); }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: .8rem; margin-bottom: .35rem; }
+  .card h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.65rem; font-weight: 600; color: var(--charcoal); line-height: 1.15;
+  }
+  .card .tribunale { font-size: .78rem; color: var(--text-light); font-weight: 300; font-style: italic; margin-bottom: .9rem; }
+  .badge {
+    flex: none; font-size: .64rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+    padding: .35rem .7rem; border-radius: 2px; white-space: nowrap; margin-top: .3rem;
+  }
+  .badge.favorable { background: #EAF3EC; color: #3F7A50; }
+  .badge.mixed { background: var(--blue-pale); color: var(--blue); }
+  .badge.cautious { background: #F7EDE4; color: #A9682F; }
+  .badge.limited { background: var(--linen); color: var(--text-secondary); }
+  .badge.watched { background: #F3EEE2; color: var(--gold); }
+
+  .stars-row { display: flex; align-items: baseline; gap: .6rem; margin-bottom: 1rem; }
+  .stars { color: var(--gold); font-size: 1rem; letter-spacing: .15em; }
+  .stars .off { color: var(--stone-light); }
+  .stars-label { font-size: .72rem; color: var(--text-light); letter-spacing: .05em; }
+
+  .card-trend { font-size: .9rem; color: var(--text-secondary); font-weight: 300; line-height: 1.65; margin-bottom: 1.1rem; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.2rem; }
+  .tag {
+    font-size: .68rem; font-weight: 500; color: var(--blue-dark);
+    background: var(--blue-pale); border-radius: 2px; padding: .3rem .6rem;
+  }
+
+  .card-toggle {
+    width: 100%; border: none; background: none; cursor: pointer;
+    font-family: 'DM Sans', sans-serif; font-size: .8rem; font-weight: 600;
+    letter-spacing: .08em; color: var(--blue);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: .9rem 0 .2rem; border-top: 1px solid var(--linen);
+  }
+  .card-toggle .arrow { transition: transform .25s ease; font-size: .7rem; }
+  .card.open .card-toggle .arrow { transform: rotate(180deg); }
+
+  .card-detail { display: none; padding-top: 1rem; }
+  .card.open .card-detail { display: block; animation: fadeIn .3s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+  .detail-h {
+    font-size: .68rem; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--gold); font-weight: 600; margin: 1.1rem 0 .45rem;
+  }
+  .detail-h:first-child { margin-top: 0; }
+  .card-detail p, .card-detail li {
+    font-size: .86rem; color: var(--text-secondary); font-weight: 300; line-height: 1.7;
+  }
+  .card-detail ul { list-style: none; }
+  .card-detail ul li { padding-left: 1rem; position: relative; margin-bottom: .35rem; }
+  .card-detail ul li::before { content: '—'; position: absolute; left: 0; color: var(--stone-light); }
+  .card-detail ul.checks li::before { content: '✓'; color: var(--gold); }
+
+  .no-results {
+    grid-column: 1 / -1; text-align: center; padding: 3.5rem 1rem;
+    color: var(--text-light); font-weight: 300;
+  }
+  .no-results button {
+    margin-top: 1rem; background: none; border: 1px solid var(--blue); color: var(--blue);
+    font-family: 'DM Sans', sans-serif; font-size: .82rem; font-weight: 500;
+    padding: .6rem 1.3rem; border-radius: 2px; cursor: pointer;
+  }
+
+  /* ─── METHOD / DISCLAIMER ─── */
+  .method {
+    background: var(--ivory); border-top: 1px solid var(--linen); border-bottom: 1px solid var(--linen);
+    padding: 3.5rem 2rem;
+  }
+  .method-inner { max-width: 860px; margin: 0 auto; text-align: center; }
+  .method h3 {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 500;
+    color: var(--charcoal); margin-bottom: 1rem;
+  }
+  .method p {
+    color: var(--text-secondary); font-weight: 300; font-size: .93rem; line-height: 1.8;
+    margin-bottom: .9rem;
+  }
+
+  /* ─── CTA ─── */
+  .cta {
+    padding: 4.5rem 2rem; text-align: center;
+  }
+  .cta h3 {
+    font-family: 'Cormorant Garamond', serif; font-size: clamp(1.9rem, 4vw, 2.6rem);
+    font-weight: 500; color: var(--charcoal); margin-bottom: .9rem;
+  }
+  .cta p { color: var(--text-secondary); font-weight: 300; max-width: 560px; margin: 0 auto 1.8rem; line-height: 1.7; }
+  .cta a {
+    display: inline-block; background: var(--blue); color: #fff; text-decoration: none;
+    font-size: .88rem; font-weight: 500; letter-spacing: .06em;
+    padding: .9rem 2.2rem; border-radius: 2px; transition: background .3s ease;
+  }
+  .cta a:hover { background: var(--blue-dark); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--charcoal); color: var(--stone-light);
+    padding: 2.8rem 2rem; text-align: center;
+  }
+  footer .f-logo {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--ivory);
+    margin-bottom: .8rem;
+  }
+  footer p { font-size: .78rem; font-weight: 300; line-height: 1.7; max-width: 720px; margin: 0 auto .5rem; }
+  footer a { color: var(--gold-light); text-decoration: none; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 860px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links {
+      position: fixed; top: 0; right: -100%; height: 100vh; width: min(78vw, 320px);
+      background: var(--warm-white); flex-direction: column; align-items: flex-start;
+      justify-content: flex-start; padding: 5rem 2rem; gap: 1.6rem;
+      transition: right .35s ease; box-shadow: -12px 0 40px rgba(0,0,0,.12); z-index: 99;
+    }
+    .nav-links.open { right: 0; }
+    .mobile-toggle { display: flex; }
+    .mobile-close {
+      display: flex; position: absolute; top: 1.2rem; right: 1.4rem;
+      background: none; border: none; font-size: 1.2rem; color: var(--charcoal); cursor: pointer;
+    }
+    .hero { padding: 7.5rem 1.3rem 2.5rem; }
+    .filters, .results-bar, .grid { padding-left: 1.3rem; padding-right: 1.3rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="/" class="nav-logo">Luminosa Global</a>
+  <ul class="nav-links" id="navLinks">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#reviews">Reviews</a></li>
+    <li><a href="/#about">About</a></li>
+    <li><a href="/omni-intelligence.html" class="active">Omni Intelligence</a></li>
+    <li><a href="/#contact">Contact</a></li>
+    <li><a href="/book" class="nav-cta">Book a Consultation</a></li>
+  </ul>
+  <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO + SEARCH -->
+<header class="hero">
+  <div class="hero-eyebrow">Omni Intelligence™</div>
+  <h1>Court-by-Court <em>Citizenship Intelligence</em></h1>
+  <p class="lede">Italian citizenship litigation is evolving court by court and case by case. Search how individual tribunals have been handling citizenship-by-descent matters — reported trends, predictability, key legal issues, and the questions worth asking your attorney.</p>
+  <div class="search-shell">
+    <div class="search-box">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A69B8D" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
+      <input id="searchInput" type="text" placeholder="Search a court, region, or issue — e.g. “Palermo”, “1948”, “Sicily”…" aria-label="Search courts">
+      <button class="search-clear" id="searchClear">Clear</button>
+    </div>
+  </div>
+</header>
+
+<!-- FILTERS -->
+<section class="filters" aria-label="Filters">
+  <div class="filter-group">
+    <div class="filter-label">Reported Trend</div>
+    <div class="chips" id="trendChips"></div>
+  </div>
+  <div class="filter-group">
+    <div class="filter-label">Key Issues</div>
+    <div class="chips" id="issueChips"></div>
+  </div>
+</section>
+
+<div class="results-bar">
+  <div class="results-count" id="resultsCount"></div>
+  <div class="sort-wrap">
+    Sort by
+    <select id="sortSelect" aria-label="Sort courts">
+      <option value="pred">Predictability</option>
+      <option value="az">Court A–Z</option>
+    </select>
+  </div>
+</div>
+
+<!-- RESULTS GRID -->
+<main class="grid" id="grid"></main>
+
+<!-- METHODOLOGY / DISCLAIMER -->
+<section class="method">
+  <div class="method-inner">
+    <h3>How to Read Omni Intelligence</h3>
+    <p>Each profile is compiled from publicly reported decisions and community discussions among applicants and practitioners. Predictability ratings reflect how consistent a court's reported outcomes appear — not the strength of any individual case. There is no single "Italian court approach": different courts, and different judges, may interpret the same legal questions differently, and appeals and Constitutional Court developments continue to reshape the landscape.</p>
+    <p>No reported decision guarantees a similar outcome. Every case depends on its own facts, evidence, filing date, and legal arguments. This page is educational information, not legal advice — always review current developments with a qualified attorney.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h3>Not sure where your case stands?</h3>
+  <p>Court assignment, filing dates, the Minor Issue, 1948 claims, Law 74/2025 — the details decide the strategy. Let's map your family's specific path in a complimentary consultation.</p>
+  <a href="/book">Book a Complimentary Consultation</a>
+</section>
+
+<footer>
+  <div class="f-logo">Luminosa Global</div>
+  <p>Omni Intelligence™ is an educational resource based on publicly available reports and community discussions. It is not legal advice, and it does not predict the outcome of any individual case. Profiles are updated as new decisions are reported.</p>
+  <p>© Luminosa Global Inc. · <a href="/">Home</a> · <a href="/book">Book a Consultation</a></p>
+</footer>
+
+<script>
+/* ─────────────────────────  DATA  ───────────────────────── */
+const COURTS = [
+  {
+    name: "Milan", tribunale: "Tribunale di Milano", region: "Lombardy",
+    pred: 2, trend: "cautious", trendLabel: "Cautious",
+    trendText: "One of Italy's most closely watched citizenship courts. Rather than applying one rule to every applicant, Milan judges appear to examine each file carefully — with filing dates, Law 74/2025, the Minor Issue, 1948 claims, and constitutional questions all in active discussion.",
+    issues: ["Law 74/2025", "Minor Issue", "1948 Cases", "Filing Dates", "Constitutional Arguments"],
+    reported: [
+      "A reported decision suggested the new Article 19-bis burden-of-proof rule should not automatically apply retroactively in every situation.",
+      "A reported case involving a minor raised constitutional questions linked to review by higher courts.",
+      "Milan has been described as preferring, in some situations, to suspend cases while awaiting guidance from higher courts."
+    ],
+    means: "If your case is assigned to Milan, your filing date may become extremely important. Your attorney may need to explain why your rights existed before the new law, whether the new law should apply to your case, whether constitutional issues affect your claim, and whether your case should proceed now or wait for higher-court guidance.",
+    questions: [
+      "Is my filing date an advantage or a disadvantage?",
+      "Does my case involve the Minor Issue? Is this a 1948 case?",
+      "Have similar Milan cases recently succeeded?",
+      "Could my case be suspended?",
+      "Is there new Court of Cassation or Constitutional Court guidance?"
+    ],
+    strategy: "Strong documentation, realistic expectations, and an attorney familiar with recent Milan decisions.",
+    bottom: "Milan is neither an easy court nor an impossible one — it is a court where preparation matters. The strongest cases appear to be those with clear documentation, carefully developed legal arguments, and facts that distinguish them from less favorable cases."
+  },
+  {
+    name: "Florence", tribunale: "Tribunale di Firenze", region: "Tuscany",
+    pred: 3, trend: "mixed", trendLabel: "Slow but Active",
+    trendText: "Florence has drawn attention for delays and backlogs more than for any consistent tendency to approve or deny. Applicants have obtained recognition through Florence, but many report long waits before hearings or final decisions — patience is often required.",
+    issues: ["Court Backlog", "Filing Dates", "Law 74/2025"],
+    reported: [
+      "Some applicants report full recognition of Italian citizenship after completing the judicial process.",
+      "Others report cases pending for extended periods before a hearing was even scheduled.",
+      "Community discussions attribute the slowness to heavy caseload rather than a clear judicial philosophy."
+    ],
+    means: "In Florence, the primary challenge may be time rather than eligibility. Prepare for longer waiting periods and possible scheduling delays — and monitor new legal developments while the case is pending, since a lengthy case may be affected by decisions issued during the wait.",
+    questions: [
+      "What is the current average time to a hearing?",
+      "Has the Florence court recently changed its approach?",
+      "Could delays affect my case because of new legal developments?",
+      "Are there recent Florence decisions similar to my facts?",
+      "Should additional arguments be included because of the expected timeline?"
+    ],
+    strategy: "File a complete, well-prepared case and be ready for a potentially lengthy process.",
+    bottom: "Best suited to well-documented cases and applicants prepared for longer timelines. A longer timeline does not necessarily indicate a weak case — but work closely with counsel to stay informed while the case is pending. Confidence level: moderate, as public information centers on delays rather than decision patterns."
+  },
+  {
+    name: "Venice", tribunale: "Tribunale di Venezia", region: "Veneto",
+    pred: 4, trend: "favorable", trendLabel: "Moderately Favorable",
+    trendText: "Venice has attracted attention for reported favorable citizenship decisions even after the 2025 reform. It appears to remain open to evaluating each case on its individual merits rather than reaching the same conclusion in every case.",
+    issues: ["Law 74/2025", "1948 Cases", "Filing Dates", "Constitutional Arguments"],
+    reported: [
+      "Reported favorable decisions after the 2025 citizenship reform.",
+      "Cases where applicants successfully argued their individual facts despite the changing legal landscape.",
+      "Ongoing appeals that may further clarify the court's approach."
+    ],
+    means: "Positive decisions have been reported, but success should not be assumed. The court appears to continue examining the filing date, the applicable law, the specific family history, constitutional arguments when raised, and the procedural history of the case. Strong preparation remains essential.",
+    questions: [
+      "Have there been recent Venice decisions similar to my case?",
+      "Does my filing date strengthen my position?",
+      "Does my case involve the Minor Issue or a 1948 claim?",
+      "Are there pending appeals that could affect my case?",
+      "What legal arguments have recently succeeded in Venice?"
+    ],
+    strategy: "Prepare a complete case, work with experienced counsel, and stay informed about new appellate decisions.",
+    bottom: "Based on publicly reported information, Venice appears to be one of the more encouraging courts in the current landscape — but no court guarantees success, and appeals or new higher-court decisions may strengthen or change the trend."
+  },
+  {
+    name: "Palermo", tribunale: "Tribunale di Palermo", region: "Sicily",
+    pred: 3, trend: "mixed", trendLabel: "Mixed & Developing",
+    trendText: "One of the most influential courts in the current citizenship landscape — repeatedly discussed in connection with Law 74/2025, the Minor Issue, retroactivity, and constitutional questions. Outcomes have been mixed, decided case by case.",
+    issues: ["Law 74/2025", "Minor Issue", "Filing Dates", "Retroactivity", "Constitutional Arguments"],
+    reported: [
+      "Both favorable and unfavorable decisions issued under the new legal framework.",
+      "Reported cases questioning whether Law 74/2025 should apply to pending applications.",
+      "Constitutional arguments continue to appear in Palermo litigation, and appeals remain active.",
+      "One of the courts most frequently discussed by attorneys and applicants after the reforms."
+    ],
+    means: "Palermo appears to examine each case individually — considering the filing date, whether legal rights existed before the reform, whether constitutional protections apply, the procedural history, and the specific arguments presented.",
+    questions: [
+      "Have there been recent Palermo decisions similar to my case?",
+      "Does my filing date affect my legal position?",
+      "Are constitutional arguments appropriate in my case?",
+      "Is an appeal likely if the decision is unfavorable?",
+      "Are higher-court decisions expected that could affect my case?"
+    ],
+    strategy: "Careful preparation, complete documentation, and a legal strategy tailored to your specific facts.",
+    bottom: "Why this court matters: Palermo has addressed several of the major legal questions raised by Law 74/2025 — filing dates, constitutional arguments, and how the new law applies. As new appeals are decided, it will likely remain one of the courts most closely followed by applicants and attorneys."
+  },
+  {
+    name: "Turin", tribunale: "Tribunale di Torino", region: "Piedmont",
+    pred: null, trend: "watched", trendLabel: "Actively Watched",
+    trendText: "An important court in the evolving landscape, particularly for 1948 claims and decree-related litigation under Law 74/2025. Turin has not followed a single predictable path — each case appears to turn on its specific facts, procedural history, and legal arguments.",
+    issues: ["1948 Cases", "Law 74/2025", "Minor Issue", "Filing Dates", "Constitutional Arguments", "Minors' Court Fees"],
+    reported: [
+      "Reported 1948 cases affected by the new citizenship reform.",
+      "Discussion of whether pre-reform filers should be treated differently from post-reform filers.",
+      "Ongoing constitutional questions and continued attorney monitoring of decree-related litigation.",
+      "Mentioned among courts where some judges have exempted minors from the €600 court filing fee."
+    ],
+    means: "Turin appears to focus on both the legal and procedural history of each application — filing date, 1948 eligibility, constitutional arguments, Minor Issue cases, procedural compliance, and the evidence supporting the claim.",
+    questions: [
+      "Has Turin recently decided cases similar to mine?",
+      "Does my filing date strengthen my legal position?",
+      "Is my case affected by Law 74/2025?",
+      "Should constitutional arguments be included?",
+      "If minors are involved, what are the current practices on court fees?"
+    ],
+    strategy: "Attend to procedural detail — filing dates, compliance, and evidence — alongside the substantive claim.",
+    bottom: "One of the courts people are actively watching. Every case is decided on its own merits; an Omni Intelligence rating will be added as more decisions are publicly reported."
+  },
+  {
+    name: "Catanzaro", tribunale: "Tribunale di Catanzaro", region: "Calabria",
+    pred: 4, trend: "favorable", trendLabel: "Moderately Favorable",
+    trendText: "A closely followed court associated with several reported favorable decisions in both traditional jure sanguinis claims and 1948 cases. It has developed a reputation for carefully examining each family's historical facts and legal issues.",
+    issues: ["1948 Cases", "Filing Dates", "Law 74/2025", "Constitutional Arguments", "Historical Documentation"],
+    reported: [
+      "Favorable recognition in reported 1948 cases.",
+      "Reported favorable decisions in applications filed before recent legal changes.",
+      "Continued discussion of constitutional issues affecting citizenship litigation.",
+      "Attorneys continue monitoring Catanzaro due to several encouraging reported outcomes."
+    ],
+    means: "Catanzaro appears willing to review both the legal and historical aspects of each claim — paying particular attention to filing dates, historical family documentation, 1948 claims, constitutional arguments, and procedural history.",
+    questions: [
+      "Have there been recent Catanzaro decisions similar to my case?",
+      "Does my filing date strengthen my legal position?",
+      "Is my case affected by the Minor Issue or Law 74/2025?",
+      "Should constitutional arguments be included?",
+      "Are important appeals pending that could affect my case?"
+    ],
+    strategy: "Build a complete, well-documented case — strong historical evidence and a clear legal strategy remain the best foundation.",
+    bottom: "Why this court matters: though smaller than Rome or Milan, Catanzaro shows that regional courts can meaningfully shape Italian citizenship law — especially in cases involving historical family lines and constitutional questions. Positive reports do not guarantee future outcomes."
+  },
+  {
+    name: "Caltanissetta", tribunale: "Tribunale di Caltanissetta", region: "Sicily",
+    pred: 3, trend: "limited", trendLabel: "Encouraging · Limited Data",
+    trendText: "A smaller court that some applicants view as potentially encouraging for certain 1948 and historical citizenship cases. Publicly discussed cases are limited, so this profile should be read with caution — but the court is worth following.",
+    issues: ["1948 Cases", "Historical Documentation", "Filing Dates", "Constitutional Arguments"],
+    reported: [
+      "Mentioned in connection with 1948 cases and older family lines.",
+      "Reported favorable developments and applicant optimism in community discussions.",
+      "Less extensive public information than courts like Palermo — but part of the broader litigation map."
+    ],
+    means: "Focus on strong documentation and clear legal arguments. Important factors may include whether the case is a 1948 claim, whether the family line involves older legal issues (including pre-1912 questions), the filing date, and any applicable constitutional arguments. Because fewer cases are publicly reported, ask your attorney about the most recent local developments.",
+    questions: [
+      "Have there been recent Caltanissetta decisions similar to my case?",
+      "Is my case a strong 1948 claim?",
+      "Does my family line involve pre-1912 or older legal issues?",
+      "Are there pending appeals that could affect my case?",
+      "Is this court currently moving cases quickly or slowly?"
+    ],
+    strategy: "Current local knowledge is especially valuable here — a smaller docket may allow closer attention to individual files.",
+    bottom: "Why this court matters: not all important developments come from Italy's largest courts. Caltanissetta is a reminder that the citizenship landscape is truly court-by-court and case-by-case."
+  }
+];
+
+const TRENDS = [
+  { id: "favorable", label: "Favorable-leaning" },
+  { id: "mixed", label: "Mixed" },
+  { id: "cautious", label: "Cautious" },
+  { id: "watched", label: "Actively Watched" },
+  { id: "limited", label: "Limited Data" }
+];
+const ISSUES = ["1948 Cases", "Law 74/2025", "Minor Issue", "Filing Dates", "Constitutional Arguments", "Historical Documentation"];
+
+/* ─────────────────────────  STATE + RENDER  ───────────────────────── */
+const state = { q: "", trends: new Set(), issues: new Set(), sort: "pred" };
+const grid = document.getElementById("grid");
+const resultsCount = document.getElementById("resultsCount");
+const searchInput = document.getElementById("searchInput");
+const searchClear = document.getElementById("searchClear");
+
+function stars(n) {
+  if (n === null) return '<span class="stars-label">Rating pending — data being compiled</span>';
+  let s = "";
+  for (let i = 1; i <= 5; i++) s += `<span class="${i <= n ? "" : "off"}">★</span>`;
+  return `<span class="stars">${s}</span><span class="stars-label">Predictability</span>`;
+}
+
+function matches(c) {
+  const q = state.q.trim().toLowerCase();
+  if (q) {
+    const hay = [c.name, c.tribunale, c.region, c.trendLabel, c.issues.join(" "), c.trendText, c.bottom].join(" ").toLowerCase();
+    if (!hay.includes(q)) return false;
+  }
+  if (state.trends.size && !state.trends.has(c.trend)) return false;
+  if (state.issues.size) {
+    for (const i of state.issues) if (!c.issues.includes(i)) return false;
+  }
+  return true;
+}
+
+function render() {
+  let list = COURTS.filter(matches);
+  list.sort((a, b) => state.sort === "az"
+    ? a.name.localeCompare(b.name)
+    : (b.pred ?? -1) - (a.pred ?? -1) || a.name.localeCompare(b.name));
+
+  resultsCount.innerHTML = `Showing <strong>${list.length}</strong> of ${COURTS.length} court profiles`;
+
+  if (!list.length) {
+    grid.innerHTML = `<div class="no-results">No courts match that search — try a broader term or reset the filters.<br><button id="resetBtn">Reset all filters</button></div>`;
+    document.getElementById("resetBtn").onclick = resetAll;
+    return;
+  }
+
+  grid.innerHTML = list.map(c => `
+    <article class="card" data-name="${c.name}">
+      <div class="card-top">
+        <h2>${c.name}</h2>
+        <span class="badge ${c.trend}">${c.trendLabel}</span>
+      </div>
+      <div class="tribunale">${c.tribunale} · ${c.region}</div>
+      <div class="stars-row">${stars(c.pred)}</div>
+      <p class="card-trend">${c.trendText}</p>
+      <div class="tags">${c.issues.map(i => `<span class="tag">${i}</span>`).join("")}</div>
+      <button class="card-toggle" aria-expanded="false">Full intelligence brief <span class="arrow">▼</span></button>
+      <div class="card-detail">
+        <div class="detail-h">Reported Activity</div>
+        <ul>${c.reported.map(r => `<li>${r}</li>`).join("")}</ul>
+        <div class="detail-h">What This Means for Applicants</div>
+        <p>${c.means}</p>
+        <div class="detail-h">Ask Your Attorney</div>
+        <ul class="checks">${c.questions.map(q => `<li>${q}</li>`).join("")}</ul>
+        <div class="detail-h">Best Strategy</div>
+        <p>${c.strategy}</p>
+        <div class="detail-h">Bottom Line</div>
+        <p>${c.bottom}</p>
+      </div>
+    </article>
+  `).join("");
+
+  grid.querySelectorAll(".card-toggle").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".card");
+      card.classList.toggle("open");
+      btn.setAttribute("aria-expanded", card.classList.contains("open"));
+      btn.firstChild.textContent = card.classList.contains("open") ? "Close brief " : "Full intelligence brief ";
+    });
+  });
+}
+
+/* ─────────────────────────  CONTROLS  ───────────────────────── */
+function buildChips(containerId, items, set, goldGroup) {
+  const el = document.getElementById(containerId);
+  el.innerHTML = items.map(i => {
+    const id = i.id ?? i, label = i.label ?? i;
+    return `<button class="chip ${goldGroup ? "gold-chip" : ""}" data-v="${id}">${label}</button>`;
+  }).join("");
+  el.querySelectorAll(".chip").forEach(ch => {
+    ch.addEventListener("click", () => {
+      const v = ch.dataset.v;
+      set.has(v) ? set.delete(v) : set.add(v);
+      ch.classList.toggle("on");
+      render();
+    });
+  });
+}
+
+function resetAll() {
+  state.q = ""; state.trends.clear(); state.issues.clear();
+  searchInput.value = ""; searchClear.classList.remove("show");
+  document.querySelectorAll(".chip.on").forEach(c => c.classList.remove("on"));
+  render();
+}
+
+buildChips("trendChips", TRENDS, state.trends, false);
+buildChips("issueChips", ISSUES, state.issues, true);
+
+searchInput.addEventListener("input", () => {
+  state.q = searchInput.value;
+  searchClear.classList.toggle("show", !!state.q);
+  render();
+});
+searchClear.addEventListener("click", () => { searchInput.value = ""; state.q = ""; searchClear.classList.remove("show"); render(); });
+document.getElementById("sortSelect").addEventListener("change", e => { state.sort = e.target.value; render(); });
+
+/* Mobile nav */
+const navLinks = document.getElementById("navLinks");
+document.getElementById("mobileToggle").addEventListener("click", () => navLinks.classList.add("open"));
+document.getElementById("mobileClose").addEventListener("click", () => navLinks.classList.remove("open"));
+
+render();
+</script>
+</body>
+</html>
