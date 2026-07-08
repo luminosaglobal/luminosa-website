@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Omni Intelligence | Court-by-Court Citizenship Insights — Luminosa Global</title>
-<meta name="description" content="Omni Intelligence™ by Luminosa Global — search and compare how Italian courts are handling citizenship-by-descent cases: trends, predictability ratings, key issues, and questions to ask your attorney.">
+<title>Omni Intelligence | Court-by-Court Citizenship Research — Luminosa Global</title>
+<meta name="description" content="Omni Intelligence™ by Luminosa Global — independent research on how Italian courts are handling citizenship-by-descent cases. Probability patterns from public reports, not legal advice.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -44,7 +44,6 @@
     background: rgba(250,248,245,0.94);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--linen);
-    transition: padding .3s ease;
   }
   .nav-logo {
     font-family: 'Cormorant Garamond', serif;
@@ -76,9 +75,9 @@
   .mobile-toggle span { width: 24px; height: 2px; background: var(--charcoal); display: block; }
   .mobile-close { display: none; }
 
-  /* ─── HERO / SEARCH CONSOLE ─── */
+  /* ─── HERO ─── */
   .hero {
-    padding: 9.5rem 2rem 3.5rem;
+    padding: 9.5rem 2rem 2.8rem;
     background: linear-gradient(180deg, var(--ivory) 0%, var(--warm-white) 100%);
     text-align: center;
     border-bottom: 1px solid var(--linen);
@@ -97,35 +96,47 @@
   .hero h1 .dash { font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: .7em; vertical-align: .09em; }
   .hero p.lede {
     color: var(--text-secondary); font-weight: 300; font-size: 1.02rem;
-    max-width: 640px; margin: 0 auto 2.2rem; line-height: 1.7;
+    max-width: 660px; margin: 0 auto 1.8rem; line-height: 1.7;
   }
 
-  .search-shell { max-width: 720px; margin: 0 auto; }
-  .search-box {
-    display: flex; align-items: center; gap: .8rem;
-    background: #fff; border: 1px solid var(--stone-light);
-    border-radius: 3px; padding: .35rem .5rem .35rem 1.2rem;
-    box-shadow: 0 12px 32px rgba(42,42,40,.07);
-    transition: border-color .25s ease, box-shadow .25s ease;
+  /* ─── RESEARCHER NOTE ─── */
+  .researcher-note {
+    max-width: 720px; margin: 0 auto;
+    background: #fff; border: 1px solid var(--stone-light); border-left: 3px solid var(--gold);
+    border-radius: 3px; padding: 1.1rem 1.4rem;
+    text-align: left; display: flex; gap: .9rem; align-items: flex-start;
+    box-shadow: 0 10px 28px rgba(42,42,40,.06);
   }
-  .search-box:focus-within { border-color: var(--blue); box-shadow: 0 12px 32px rgba(0,92,175,.12); }
-  .search-box svg { flex: none; }
-  .search-box input {
-    flex: 1; border: none; outline: none; background: transparent;
-    font-family: 'DM Sans', sans-serif; font-size: 1rem; color: var(--text-primary);
-    padding: .8rem 0; min-width: 0;
+  .researcher-note .rn-icon { flex: none; color: var(--gold); font-size: 1.1rem; line-height: 1.4; }
+  .researcher-note p {
+    font-size: .86rem; color: var(--text-secondary); font-weight: 300; line-height: 1.65;
   }
-  .search-box input::placeholder { color: var(--text-light); font-weight: 300; }
-  .search-clear {
-    border: none; background: var(--blue-pale); color: var(--blue);
-    font-size: .78rem; font-weight: 500; letter-spacing: .04em;
-    padding: .55rem .9rem; border-radius: 2px; cursor: pointer; display: none;
+  .researcher-note strong { color: var(--charcoal); font-weight: 600; }
+
+  /* ─── COURT QUICK-FIND ─── */
+  .court-index {
+    max-width: 1120px; margin: 0 auto; padding: 2.2rem 2rem .4rem; text-align: center;
   }
-  .search-clear.show { display: block; }
+  .index-label {
+    font-size: .68rem; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--text-light); font-weight: 600; margin-bottom: .8rem;
+  }
+  .index-chips { display: flex; flex-wrap: wrap; gap: .55rem; justify-content: center; }
+  .court-chip {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.02rem; font-weight: 600;
+    color: var(--charcoal); background: #fff;
+    border: 1px solid var(--linen); border-radius: 2px;
+    padding: .5rem 1.1rem; cursor: pointer;
+    transition: all .2s ease;
+  }
+  .court-chip:hover { border-color: var(--blue); color: var(--blue); }
+  .court-chip .cc-region { display: block; font-family: 'DM Sans', sans-serif; font-size: .62rem; font-weight: 400; letter-spacing: .1em; text-transform: uppercase; color: var(--text-light); margin-top: .1rem; }
+  .court-chip.pending { opacity: .75; }
+  .court-chip.pending .cc-region::after { content: ' · In Progress'; color: var(--gold); }
 
   /* ─── FILTER BAR ─── */
   .filters {
-    max-width: 1120px; margin: 0 auto; padding: 1.8rem 2rem .4rem;
+    max-width: 1120px; margin: 0 auto; padding: 1.6rem 2rem .4rem;
   }
   .filter-group { margin-bottom: 1.1rem; }
   .filter-label {
@@ -167,8 +178,10 @@
     background: #fff; border: 1px solid var(--linen); border-radius: 3px;
     padding: 1.7rem 1.7rem 1.4rem; position: relative;
     transition: box-shadow .25s ease, transform .25s ease;
+    scroll-margin-top: 110px;
   }
   .card:hover { box-shadow: 0 16px 38px rgba(42,42,40,.08); transform: translateY(-2px); }
+  .card.flash { box-shadow: 0 0 0 2px var(--gold), 0 16px 38px rgba(42,42,40,.1); }
   .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: .8rem; margin-bottom: .35rem; }
   .card h2 {
     font-family: 'Cormorant Garamond', serif;
@@ -185,6 +198,7 @@
   .badge.cautious { background: #F7EDE4; color: #A9682F; }
   .badge.limited { background: var(--linen); color: var(--text-secondary); }
   .badge.watched { background: #F3EEE2; color: var(--gold); }
+  .badge.pending { background: var(--ivory); color: var(--stone); border: 1px dashed var(--stone-light); }
 
   .stars-row { display: flex; align-items: baseline; gap: .6rem; margin-bottom: 1rem; }
   .stars { color: var(--gold); font-size: 1rem; letter-spacing: .15em; }
@@ -226,6 +240,16 @@
   .card-detail ul li::before { content: '—'; position: absolute; left: 0; color: var(--stone-light); }
   .card-detail ul.checks li::before { content: '✓'; color: var(--gold); }
 
+  .card-cta {
+    display: inline-block; margin-top: .4rem;
+    font-size: .8rem; font-weight: 600; letter-spacing: .05em;
+    color: var(--blue); text-decoration: none; border-bottom: 1px solid var(--blue);
+    padding-bottom: 1px;
+  }
+  .card-cta:hover { color: var(--blue-dark); border-color: var(--blue-dark); }
+
+  .pending-body { font-size: .88rem; color: var(--text-secondary); font-weight: 300; line-height: 1.7; margin-bottom: 1rem; }
+
   .no-results {
     grid-column: 1 / -1; text-align: center; padding: 3.5rem 1rem;
     color: var(--text-light); font-weight: 300;
@@ -259,7 +283,7 @@
     font-family: 'Cormorant Garamond', serif; font-size: clamp(1.9rem, 4vw, 2.6rem);
     font-weight: 500; color: var(--charcoal); margin-bottom: .9rem;
   }
-  .cta p { color: var(--text-secondary); font-weight: 300; max-width: 560px; margin: 0 auto 1.8rem; line-height: 1.7; }
+  .cta p { color: var(--text-secondary); font-weight: 300; max-width: 600px; margin: 0 auto 1.8rem; line-height: 1.7; }
   .cta a {
     display: inline-block; background: var(--blue); color: #fff; text-decoration: none;
     font-size: .88rem; font-weight: 500; letter-spacing: .06em;
@@ -276,7 +300,7 @@
     font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--ivory);
     margin-bottom: .8rem;
   }
-  footer p { font-size: .78rem; font-weight: 300; line-height: 1.7; max-width: 720px; margin: 0 auto .5rem; }
+  footer p { font-size: .78rem; font-weight: 300; line-height: 1.7; max-width: 760px; margin: 0 auto .5rem; }
   footer a { color: var(--gold-light); text-decoration: none; }
 
   /* ─── RESPONSIVE ─── */
@@ -294,8 +318,8 @@
       display: flex; position: absolute; top: 1.2rem; right: 1.4rem;
       background: none; border: none; font-size: 1.2rem; color: var(--charcoal); cursor: pointer;
     }
-    .hero { padding: 7.5rem 1.3rem 2.5rem; }
-    .filters, .results-bar, .grid { padding-left: 1.3rem; padding-right: 1.3rem; }
+    .hero { padding: 7.5rem 1.3rem 2.2rem; }
+    .court-index, .filters, .results-bar, .grid { padding-left: 1.3rem; padding-right: 1.3rem; }
   }
 </style>
 </head>
@@ -318,19 +342,22 @@
   </button>
 </nav>
 
-<!-- HERO + SEARCH -->
+<!-- HERO -->
 <header class="hero">
   <div class="hero-eyebrow">Omni Intelligence™</div>
   <h1>Court<span class="dash">-</span>by<span class="dash">-</span>Court <em>Citizenship Intelligence</em></h1>
-  <p class="lede">Italian citizenship litigation is evolving court by court and case by case. Search how individual tribunals have been handling citizenship-by-descent matters — reported trends, predictability, key legal issues, and the questions worth asking your attorney.</p>
-  <div class="search-shell">
-    <div class="search-box">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A69B8D" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
-      <input id="searchInput" type="text" placeholder="Search a court, region, or issue — e.g. “Palermo”, “1948”, “Sicily”…" aria-label="Search courts">
-      <button class="search-clear" id="searchClear">Clear</button>
-    </div>
+  <p class="lede">Independent research on how Italian courts are handling citizenship-by-descent cases — probability patterns drawn from publicly reported decisions and community discussions, so you can understand the landscape before you file.</p>
+  <div class="researcher-note">
+    <div class="rn-icon">✦</div>
+    <p><strong>A note from Domenico, Luminosa Global:</strong> I'm a researcher, not an attorney. These profiles describe probability patterns — how courts <em>appear</em> to be trending based on public reports — and nothing here is legal advice or a prediction of your outcome. Luminosa Global works in partnership with an attorney: legal questions about your specific case belong in a <a href="/book" style="color:var(--blue);">consultation</a>, not on this page.</p>
   </div>
 </header>
+
+<!-- COURT QUICK-FIND -->
+<section class="court-index" aria-label="Find your court">
+  <div class="index-label">Find Your Court</div>
+  <div class="index-chips" id="courtIndex"></div>
+</section>
 
 <!-- FILTERS -->
 <section class="filters" aria-label="Filters">
@@ -361,22 +388,22 @@
 <!-- METHODOLOGY / DISCLAIMER -->
 <section class="method">
   <div class="method-inner">
-    <h3>How to Read Omni Intelligence</h3>
-    <p>Each profile is compiled from publicly reported decisions and community discussions among applicants and practitioners. Predictability ratings reflect how consistent a court's reported outcomes appear — not the strength of any individual case. There is no single "Italian court approach": different courts, and different judges, may interpret the same legal questions differently, and appeals and Constitutional Court developments continue to reshape the landscape.</p>
-    <p>No reported decision guarantees a similar outcome. Every case depends on its own facts, evidence, filing date, and legal arguments. This page is educational information, not legal advice — always review current developments with a qualified attorney.</p>
+    <h3>How This Research Works</h3>
+    <p>Each profile is compiled from publicly reported decisions and community discussions among applicants and practitioners. Predictability ratings express how consistent a court's reported outcomes appear — they are probability signals, not the strength of any individual case. There is no single "Italian court approach": different courts, and different judges, may interpret the same legal questions differently, and appeals and Constitutional Court developments continue to reshape the landscape.</p>
+    <p>This is research, not legal advice. Omni Intelligence is compiled by Domenico of Luminosa Global — a researcher, not an attorney — and no reported decision guarantees a similar outcome; every case depends on its own facts, evidence, filing date, and legal arguments. Luminosa Global operates in partnership with an attorney; strategy for your specific case is developed in consultation, never from a webpage.</p>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta">
-  <h3>Not sure where your case stands?</h3>
-  <p>Court assignment, filing dates, the Minor Issue, 1948 claims, Law 74/2025 — the details decide the strategy. Let's map your family's specific path in a complimentary consultation.</p>
+  <h3>The research shows the patterns.<br>Your case needs a plan.</h3>
+  <p>Court assignment, filing dates, the Minor Issue, 1948 claims, Law 74/2025 — the details decide the strategy. In a complimentary consultation, we'll map what these patterns mean for your family's specific case, in partnership with our attorney.</p>
   <a href="/book">Book a Complimentary Consultation</a>
 </section>
 
 <footer>
   <div class="f-logo">Luminosa Global</div>
-  <p>Omni Intelligence™ is an educational resource based on publicly available reports and community discussions. It is not legal advice, and it does not predict the outcome of any individual case. Profiles are updated as new decisions are reported.</p>
+  <p>Omni Intelligence™ is independent research based on publicly reported decisions and community discussions. It describes probability patterns only — it is not legal advice, and it does not predict the outcome of any individual case. Luminosa Global is not a law firm; we work in partnership with an attorney, and case-specific guidance is provided through consultation. Profiles are updated as new decisions are reported.</p>
   <p>© Luminosa Global Inc. · <a href="/">Home</a> · <a href="/book">Book a Consultation</a></p>
 </footer>
 
@@ -488,7 +515,7 @@ const COURTS = [
       "If minors are involved, what are the current practices on court fees?"
     ],
     strategy: "Attend to procedural detail — filing dates, compliance, and evidence — alongside the substantive claim.",
-    bottom: "One of the courts people are actively watching. Every case is decided on its own merits; an Omni Intelligence rating will be added as more decisions are publicly reported."
+    bottom: "One of the courts people are actively watching. Every case is decided on its own merits; a probability rating will be added as more decisions are publicly reported."
   },
   {
     name: "Catanzaro", tribunale: "Tribunale di Catanzaro", region: "Calabria",
@@ -532,6 +559,26 @@ const COURTS = [
     ],
     strategy: "Current local knowledge is especially valuable here — a smaller docket may allow closer attention to individual files.",
     bottom: "Why this court matters: not all important developments come from Italy's largest courts. Caltanissetta is a reminder that the citizenship landscape is truly court-by-court and case-by-case."
+  },
+  {
+    name: "Rome", tribunale: "Tribunale di Roma", region: "Lazio",
+    pred: null, trend: "pending", trendLabel: "Profile In Progress", inProgress: true,
+    pendingText: "Rome handles a large number of citizenship cases and often influences discussions among attorneys and applicants — one of Italy's key citizenship courts. A full Omni Intelligence profile is being compiled as decisions are reported."
+  },
+  {
+    name: "Bologna", tribunale: "Tribunale di Bologna", region: "Emilia-Romagna",
+    pred: null, trend: "pending", trendLabel: "Profile In Progress", inProgress: true,
+    pendingText: "Bologna is one of the courts most frequently raised in citizenship discussions. A full Omni Intelligence profile is being compiled as decisions are reported."
+  },
+  {
+    name: "Naples", tribunale: "Tribunale di Napoli", region: "Campania",
+    pred: null, trend: "pending", trendLabel: "Profile In Progress", inProgress: true,
+    pendingText: "Naples is among the major courts applicants ask about most. A full Omni Intelligence profile is being compiled as decisions are reported."
+  },
+  {
+    name: "Campobasso", tribunale: "Tribunale di Campobasso", region: "Molise",
+    pred: null, trend: "pending", trendLabel: "Profile In Progress", inProgress: true,
+    pendingText: "Campobasso appears regularly in citizenship-by-descent discussions. A full Omni Intelligence profile is being compiled as decisions are reported."
   }
 ];
 
@@ -545,27 +592,23 @@ const TRENDS = [
 const ISSUES = ["1948 Cases", "Law 74/2025", "Minor Issue", "Filing Dates", "Constitutional Arguments", "Historical Documentation"];
 
 /* ─────────────────────────  STATE + RENDER  ───────────────────────── */
-const state = { q: "", trends: new Set(), issues: new Set(), sort: "pred" };
+const state = { trends: new Set(), issues: new Set(), sort: "pred" };
 const grid = document.getElementById("grid");
 const resultsCount = document.getElementById("resultsCount");
-const searchInput = document.getElementById("searchInput");
-const searchClear = document.getElementById("searchClear");
+
+function slug(n) { return "court-" + n.toLowerCase(); }
 
 function stars(n) {
-  if (n === null) return '<span class="stars-label">Rating pending — data being compiled</span>';
+  if (n === null) return '<span class="stars-label">Probability rating pending — data being compiled</span>';
   let s = "";
   for (let i = 1; i <= 5; i++) s += `<span class="${i <= n ? "" : "off"}">★</span>`;
-  return `<span class="stars">${s}</span><span class="stars-label">Predictability</span>`;
+  return `<span class="stars">${s}</span><span class="stars-label">Predictability (probability signal)</span>`;
 }
 
 function matches(c) {
-  const q = state.q.trim().toLowerCase();
-  if (q) {
-    const hay = [c.name, c.tribunale, c.region, c.trendLabel, c.issues.join(" "), c.trendText, c.bottom].join(" ").toLowerCase();
-    if (!hay.includes(q)) return false;
-  }
   if (state.trends.size && !state.trends.has(c.trend)) return false;
   if (state.issues.size) {
+    if (!c.issues) return false;
     for (const i of state.issues) if (!c.issues.includes(i)) return false;
   }
   return true;
@@ -580,13 +623,25 @@ function render() {
   resultsCount.innerHTML = `Showing <strong>${list.length}</strong> of ${COURTS.length} court profiles`;
 
   if (!list.length) {
-    grid.innerHTML = `<div class="no-results">No courts match that search — try a broader term or reset the filters.<br><button id="resetBtn">Reset all filters</button></div>`;
+    grid.innerHTML = `<div class="no-results">No courts match those filters.<br><button id="resetBtn">Reset all filters</button></div>`;
     document.getElementById("resetBtn").onclick = resetAll;
     return;
   }
 
-  grid.innerHTML = list.map(c => `
-    <article class="card" data-name="${c.name}">
+  grid.innerHTML = list.map(c => c.inProgress ? `
+    <article class="card" id="${slug(c.name)}">
+      <div class="card-top">
+        <h2>${c.name}</h2>
+        <span class="badge pending">${c.trendLabel}</span>
+      </div>
+      <div class="tribunale">${c.tribunale} · ${c.region}</div>
+      <div class="stars-row">${stars(null)}</div>
+      <p class="pending-body">${c.pendingText}</p>
+      <p class="pending-body">If your case involves ${c.name}, don't wait on the research — book a complimentary consultation and we'll review your situation with our attorney partnership.</p>
+      <a class="card-cta" href="/book">Book a consultation →</a>
+    </article>
+  ` : `
+    <article class="card" id="${slug(c.name)}">
       <div class="card-top">
         <h2>${c.name}</h2>
         <span class="badge ${c.trend}">${c.trendLabel}</span>
@@ -595,7 +650,7 @@ function render() {
       <div class="stars-row">${stars(c.pred)}</div>
       <p class="card-trend">${c.trendText}</p>
       <div class="tags">${c.issues.map(i => `<span class="tag">${i}</span>`).join("")}</div>
-      <button class="card-toggle" aria-expanded="false">Full intelligence brief <span class="arrow">▼</span></button>
+      <button class="card-toggle" aria-expanded="false">Full research brief <span class="arrow">▼</span></button>
       <div class="card-detail">
         <div class="detail-h">Reported Activity</div>
         <ul>${c.reported.map(r => `<li>${r}</li>`).join("")}</ul>
@@ -607,6 +662,7 @@ function render() {
         <p>${c.strategy}</p>
         <div class="detail-h">Bottom Line</div>
         <p>${c.bottom}</p>
+        <a class="card-cta" href="/book">Discuss your ${c.name} case in a consultation →</a>
       </div>
     </article>
   `).join("");
@@ -616,12 +672,35 @@ function render() {
       const card = btn.closest(".card");
       card.classList.toggle("open");
       btn.setAttribute("aria-expanded", card.classList.contains("open"));
-      btn.firstChild.textContent = card.classList.contains("open") ? "Close brief " : "Full intelligence brief ";
+      btn.firstChild.textContent = card.classList.contains("open") ? "Close brief " : "Full research brief ";
     });
   });
 }
 
-/* ─────────────────────────  CONTROLS  ───────────────────────── */
+/* ─────────────────────────  COURT QUICK-FIND  ───────────────────────── */
+function buildCourtIndex() {
+  const el = document.getElementById("courtIndex");
+  const sorted = [...COURTS].sort((a, b) => a.name.localeCompare(b.name));
+  el.innerHTML = sorted.map(c => `
+    <button class="court-chip ${c.inProgress ? "pending" : ""}" data-court="${c.name}">
+      ${c.name}<span class="cc-region">${c.region}</span>
+    </button>
+  `).join("");
+  el.querySelectorAll(".court-chip").forEach(ch => {
+    ch.addEventListener("click", () => {
+      resetAll(false);
+      const card = document.getElementById(slug(ch.dataset.court));
+      if (!card) return;
+      card.scrollIntoView({ behavior: "smooth", block: "start" });
+      const toggle = card.querySelector(".card-toggle");
+      if (toggle && !card.classList.contains("open")) toggle.click();
+      card.classList.add("flash");
+      setTimeout(() => card.classList.remove("flash"), 1800);
+    });
+  });
+}
+
+/* ─────────────────────────  FILTER CONTROLS  ───────────────────────── */
 function buildChips(containerId, items, set, goldGroup) {
   const el = document.getElementById(containerId);
   el.innerHTML = items.map(i => {
@@ -638,22 +717,14 @@ function buildChips(containerId, items, set, goldGroup) {
   });
 }
 
-function resetAll() {
-  state.q = ""; state.trends.clear(); state.issues.clear();
-  searchInput.value = ""; searchClear.classList.remove("show");
+function resetAll(rerender = true) {
+  state.trends.clear(); state.issues.clear();
   document.querySelectorAll(".chip.on").forEach(c => c.classList.remove("on"));
-  render();
+  if (rerender !== false) render(); else render();
 }
 
 buildChips("trendChips", TRENDS, state.trends, false);
 buildChips("issueChips", ISSUES, state.issues, true);
-
-searchInput.addEventListener("input", () => {
-  state.q = searchInput.value;
-  searchClear.classList.toggle("show", !!state.q);
-  render();
-});
-searchClear.addEventListener("click", () => { searchInput.value = ""; state.q = ""; searchClear.classList.remove("show"); render(); });
 document.getElementById("sortSelect").addEventListener("change", e => { state.sort = e.target.value; render(); });
 
 /* Mobile nav */
@@ -662,6 +733,7 @@ document.getElementById("mobileToggle").addEventListener("click", () => navLinks
 document.getElementById("mobileClose").addEventListener("click", () => navLinks.classList.remove("open"));
 
 render();
+buildCourtIndex();
 </script>
 </body>
 </html>
