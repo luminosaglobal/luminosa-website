@@ -94,6 +94,7 @@
     max-width: 760px; margin: 0 auto .9rem;
   }
   .hero h1 em { font-style: italic; color: var(--blue); }
+  .hero h1 .dash { font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: .7em; vertical-align: .09em; }
   .hero p.lede {
     color: var(--text-secondary); font-weight: 300; font-size: 1.02rem;
     max-width: 640px; margin: 0 auto 2.2rem; line-height: 1.7;
@@ -176,7 +177,8 @@
   .card .tribunale { font-size: .78rem; color: var(--text-light); font-weight: 300; font-style: italic; margin-bottom: .9rem; }
   .badge {
     flex: none; font-size: .64rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
-    padding: .35rem .7rem; border-radius: 2px; white-space: nowrap; margin-top: .3rem;
+    padding: .35rem .7rem; border-radius: 2px; margin-top: .3rem;
+    max-width: 42%; text-align: center; line-height: 1.5;
   }
   .badge.favorable { background: #EAF3EC; color: #3F7A50; }
   .badge.mixed { background: var(--blue-pale); color: var(--blue); }
@@ -307,7 +309,7 @@
     <li><a href="/#services">Services</a></li>
     <li><a href="/#reviews">Reviews</a></li>
     <li><a href="/#about">About</a></li>
-    <li><a href="/omni-intelligence.html" class="active">Omni Intelligence</a></li>
+    <li><a href="/omni-intelligence.html" class="active">Court Intelligence</a></li>
     <li><a href="/#contact">Contact</a></li>
     <li><a href="/book" class="nav-cta">Book a Consultation</a></li>
   </ul>
@@ -319,7 +321,7 @@
 <!-- HERO + SEARCH -->
 <header class="hero">
   <div class="hero-eyebrow">Omni Intelligence™</div>
-  <h1>Court-by-Court <em>Citizenship Intelligence</em></h1>
+  <h1>Court<span class="dash">-</span>by<span class="dash">-</span>Court <em>Citizenship Intelligence</em></h1>
   <p class="lede">Italian citizenship litigation is evolving court by court and case by case. Search how individual tribunals have been handling citizenship-by-descent matters — reported trends, predictability, key legal issues, and the questions worth asking your attorney.</p>
   <div class="search-shell">
     <div class="search-box">
@@ -512,7 +514,7 @@ const COURTS = [
   },
   {
     name: "Caltanissetta", tribunale: "Tribunale di Caltanissetta", region: "Sicily",
-    pred: 3, trend: "limited", trendLabel: "Encouraging · Limited Data",
+    pred: 3, trend: "limited", trendLabel: "Limited Data",
     trendText: "A smaller court that some applicants view as potentially encouraging for certain 1948 and historical citizenship cases. Publicly discussed cases are limited, so this profile should be read with caution — but the court is worth following.",
     issues: ["1948 Cases", "Historical Documentation", "Filing Dates", "Constitutional Arguments"],
     reported: [
